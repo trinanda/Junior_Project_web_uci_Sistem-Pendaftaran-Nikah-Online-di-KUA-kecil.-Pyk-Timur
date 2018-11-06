@@ -1,0 +1,9 @@
+flask                       ==      1.0.2
+gunicorn                    ==      19.8.1
+psycopg2                    ==      2.7.4
+flask-sqlalchemy            ==      2.3.2
+alembic                     ==      0.9.9
+flask-admin                 ==      1.5.1
+flask-wtf                   ==      0.14.2
+wkhtmltopdf                 ==      0.2
+pdfkit                      ==      0.6.1
