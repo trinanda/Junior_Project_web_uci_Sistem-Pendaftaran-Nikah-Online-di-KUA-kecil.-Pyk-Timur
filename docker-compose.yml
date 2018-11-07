@@ -13,7 +13,7 @@ services:
       - '.:/web_app_docker'
 
     ports:
-      - '9999:80'
+      - '8716:80'
 
   service_postgresql_on_docker:
     image: 'postgres:9.6'

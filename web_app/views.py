@@ -60,4 +60,5 @@ class ContentView(AdminAkses):
     pass
 
 class dataCatinView(AdminAkses):
-    pass
+    column_list = ('NIK Catin Laki-laki', 'Nama Catin Laki-laki', 'NIK Catin Perempuan',
+                   'Nama Catin Perempuan', 'Jadwal Nikah', 'Tempat Pelaksanaan')

@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+{% extends "society_dashboard.html" %}
+{% block content %}
+
 <html lang="en">
 
 <head>
@@ -10,7 +12,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>Au Register Forms by Colorlib</title>
+    <title>Masukan data Anda</title>
 
     <!-- Icons font CSS-->
     <link href="{{ url_for('static', filename='user_input_data/vendor/mdi-font/css/material-design-iconic-font.min.css') }}" rel="stylesheet" media="all">
@@ -32,32 +34,44 @@
             <div class="card card-3">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title">Registration Info</h2>
+                    <h2 class="title">Masukan Data Anda</h2>
                     <form method="POST">
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Name" name="name">
+                            <input class="input--style-3" type="text" placeholder="NIK Catin Laki-laki" name="name">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3 js-datepicker" type="text" placeholder="Birthdate" name="birthday">
+                            <input class="input--style-3" type="text" placeholder="Nama Catin Laki-laki" name="name">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="NIK Catin Perempuan" name="name">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Catin Catin Perempuan" name="name">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3 js-datepicker" type="text" placeholder="Jadwal Nikah" name="birthday">
                             <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                         </div>
                         <div class="input-group">
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="gender">
-                                    <option disabled="disabled" selected="selected">Gender</option>
-                                    <option>Male</option>
-                                    <option>Female</option>
-                                    <option>Other</option>
-                                </select>
-                                <div class="select-dropdown"></div>
-                            </div>
+                            <input class="input--style-3" type="text" placeholder="Tempat Pelaksanaan Nikah" name="name">
                         </div>
-                        <div class="input-group">
-                            <input class="input--style-3" type="email" placeholder="Email" name="email">
-                        </div>
-                        <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Phone" name="phone">
-                        </div>
+                        <!--<div class="input-group">-->
+                            <!--<div class="rs-select2 js-select-simple select&#45;&#45;no-search">-->
+                                <!--<select name="gender">-->
+                                    <!--<option disabled="disabled" selected="selected">Gender</option>-->
+                                    <!--<option>Male</option>-->
+                                    <!--<option>Female</option>-->
+                                    <!--<option>Other</option>-->
+                                <!--</select>-->
+                                <!--<div class="select-dropdown"></div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="input-group">-->
+                            <!--<input class="input&#45;&#45;style-3" type="email" placeholder="Email" name="email">-->
+                        <!--</div>-->
+                        <!--<div class="input-group">-->
+                            <!--<input class="input&#45;&#45;style-3" type="text" placeholder="Phone" name="phone">-->
+                        <!--</div>-->
                         <div class="p-t-10">
                             <button class="btn btn--pill btn--green" type="submit">Submit</button>
                         </div>
@@ -81,3 +95,5 @@
 
 </html>
 <!-- end document-->
+
+{% endblock %}

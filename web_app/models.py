@@ -37,7 +37,8 @@ class User(db.Model, UserMixin):
     roles = relationship('Role', secondary=roles_users,
                          backref=backref('users', lazy='dynamic'))
 
-    def __init__(self, email='', password='', active=False):
+    def __init__(self, name='', email='', password='', active=False):
+        self.name = name
         self.email = email
         self.password = password
         self.active = active
@@ -71,14 +72,14 @@ class Content(db.Model):
 
 
 # Data Catin
-class dataCatin(db.Model):
+class DataCatin(db.Model):
     id = Column(Integer, primary_key=True)
-    nikCatinLakiLaki = Column(Integer)
-    catinLakiLakiName = Column(String(100))
-    nikCatinPerempuan = Column(Integer)
-    catinPerempuanName = Column(String(100))
-    jadwalNikah = Column(DateTime)
-    tempatPelaksanaanNikah = Column(String)
+    NIK_catin_laki_laki = Column(Integer)
+    nama_catin_laki_laki = Column(String(100))
+    NIK_catin_perempuan = Column(Integer)
+    nama_catin_perempuan= Column(String(100))
+    jadwal_nikah = Column(DateTime)
+    tempat_pelaksaan_nikah = Column(String)
 
     user_id = Column(Integer, ForeignKey(User.id))
 

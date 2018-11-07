@@ -1,5 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Sign Up
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+{% endblock %}
+{% block content %}
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,18 +33,24 @@
                     <div class="signup-form">
                         <h2 class="form-title">Mendaftar</h2>
                         <form method="POST" class="register-form" id="register-form">
-                            <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="name" id="name" placeholder="Nama Anda"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                <input type="email" name="email" id="email" placeholder="Email"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="pass" id="pass" placeholder="Password"/>
-                            </div>
+
+                            {{ form.hidden_tag() }}
+                            {{ wtf.form_field(form.name) }}
+                            {{ wtf.form_field(form.email) }}
+                            {{ wtf.form_field(form.password) }}
+
+                            <!--<div class="form-group">-->
+                                <!--<label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>-->
+                                <!--<input type="text" name="name" id="name" placeholder="Nama Anda"/>-->
+                            <!--</div>-->
+                            <!--<div class="form-group">-->
+                                <!--<label for="email"><i class="zmdi zmdi-email"></i></label>-->
+                                <!--<input type="email" name="email" id="email" placeholder="Email"/>-->
+                            <!--</div>-->
+                            <!--<div class="form-group">-->
+                                <!--<label for="pass"><i class="zmdi zmdi-lock"></i></label>-->
+                                <!--<input type="password" name="pass" id="pass" placeholder="Password"/>-->
+                            <!--</div>-->
                             <!--<div class="form-group">-->
                                 <!--<label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>-->
                                 <!--<input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>-->
@@ -50,7 +66,7 @@
                     </div>
                     <div class="signup-image">
                         <figure><img src="{{ url_for('static', filename='register_and_login/images/signup-image.jpg') }}" alt="sing up image"></figure>
-                        <a href="http://localhost:9999/login" class="signup-image-link">Saya sudah punya akun</a>
+                        <a href="{{ url_for('login') }}" class="signup-image-link">Saya sudah punya akun</a>
                     </div>
                 </div>
             </div>
@@ -62,4 +78,5 @@
     <script src="{{ url_for('static', filename='register_and_login/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='register_and_login/js/main.js') }}"></script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
-</html>
+
+{% endblock %}
