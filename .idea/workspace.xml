@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8335985c-1e1b-4534-b227-100bfe4ee3c1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/477eb05c3dd9_chane_table_datacatin_to_datacatin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/4c88e32c2639_change_email_to_unique.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/f889c272e3ae_change_kolom_name_on_datacatin_table.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/templates/operator_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/templates/operator_dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/templates/society_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/templates/society_dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/templates/tambah_data.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/templates/theme.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/templates/theme.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/templates/user_input_data.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/templates/society_input_data.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="8335985c-1e1b-4534-b227-100bfe4ee3c1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +52,7 @@
           <entry key="html" value="1821" />
           <entry key="ini" value="18" />
           <entry key="md" value="38" />
-          <entry key="py" value="3903" />
+          <entry key="py" value="3946" />
           <entry key="sh" value="30" />
           <entry key="txt" value="3" />
           <entry key="yml" value="429" />
@@ -80,7 +66,7 @@
           <entry key="Hoi4 file" value="3" />
           <entry key="Markdown" value="38" />
           <entry key="PLAIN_TEXT" value="18" />
-          <entry key="Python" value="3903" />
+          <entry key="Python" value="3946" />
           <entry key="YAML" value="429" />
         </counts>
       </usages-collector>
@@ -91,13 +77,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web_app/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="140" column="84" selection-start-line="140" selection-start-column="82" selection-end-line="140" selection-end-column="84" />
+            <state relative-caret-position="284">
+              <caret line="141" column="72" selection-start-line="141" selection-start-column="72" selection-end-line="141" selection-end-column="72" />
               <folding>
-                <marker date="1541598467573" expanded="true" signature="727:728" ph="..." />
-                <marker date="1541598467573" expanded="true" signature="1782:7981" ph="..." />
-                <marker date="1541598467573" expanded="true" signature="6812:6823" ph="..." />
-                <marker date="1541598467573" expanded="true" signature="6812:7981" ph="..." />
+                <marker date="1541598675810" expanded="true" signature="727:728" ph="..." />
+                <marker date="1541598675810" expanded="true" signature="1782:7458" ph="..." />
+                <marker date="1541598675810" expanded="true" signature="6289:6300" ph="..." />
+                <marker date="1541598675810" expanded="true" signature="6289:7458" ph="..." />
               </folding>
             </state>
           </provider>
@@ -338,7 +324,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1138088" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -605,13 +590,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web_app/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="140" column="84" selection-start-line="140" selection-start-column="82" selection-end-line="140" selection-end-column="84" />
+        <state relative-caret-position="284">
+          <caret line="141" column="72" selection-start-line="141" selection-start-column="72" selection-end-line="141" selection-end-column="72" />
           <folding>
-            <marker date="1541598467573" expanded="true" signature="727:728" ph="..." />
-            <marker date="1541598467573" expanded="true" signature="1782:7981" ph="..." />
-            <marker date="1541598467573" expanded="true" signature="6812:6823" ph="..." />
-            <marker date="1541598467573" expanded="true" signature="6812:7981" ph="..." />
+            <marker date="1541598675810" expanded="true" signature="727:728" ph="..." />
+            <marker date="1541598675810" expanded="true" signature="1782:7458" ph="..." />
+            <marker date="1541598675810" expanded="true" signature="6289:6300" ph="..." />
+            <marker date="1541598675810" expanded="true" signature="6289:7458" ph="..." />
           </folding>
         </state>
       </provider>
