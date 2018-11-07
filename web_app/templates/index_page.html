@@ -3,26 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Interact</title>
+<title>Nikah Online</title>
 <meta name="description" content="">
 <meta name="author" content="">
 
 <!-- Favicons
     ================================================== -->
-<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
-<link rel="apple-touch-icon" href="{{ url_for('static', filename='img/apple-touch-icon.png') }}">
-<link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='img/apple-touch-icon-72x72.png') }}">
-<link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='img/apple-touch-icon-114x114.png') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='home/img/favicon.ico') }}" type="image/x-icon">
+<link rel="apple-touch-icon" href="{{ url_for('static', filename='home/img/apple-touch-icon.png') }}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='home/img/apple-touch-icon-72x72.png') }}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='home/img/apple-touch-icon-114x114.png') }}">
 
 <!-- Bootstrap -->
-<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/bootstrap.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome/css/font-awesome.css') }}">
+<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='home/css/bootstrap.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home/fonts/font-awesome/css/font-awesome.css') }}">
 
 <!-- Stylesheet
     ================================================== -->
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/nivo-lightbox/nivo-lightbox.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/nivo-lightbox/default.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home/css/style.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home/css/nivo-lightbox/nivo-lightbox.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home/css/nivo-lightbox/default.css') }}">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
@@ -42,18 +42,15 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand page-scroll" href="#page-top">Interact</a> </div>
+      <a class="navbar-brand page-scroll" href="#page-top">Nikah Online</a> </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#features" class="page-scroll">Features</a></li>
         <li><a href="#about" class="page-scroll">About</a></li>
-        <li><a href="#services" class="page-scroll">Services</a></li>
-        <li><a href="#portfolio" class="page-scroll">Gallery</a></li>
-        <li><a href="#testimonials" class="page-scroll">Testimonials</a></li>
-        <li><a href="#team" class="page-scroll">Team</a></li>
-        <li><a href="#contact" class="page-scroll">Contact</a></li>
+        <li><a href="#register" class="page-scroll">Register</a></li>
+        <li><a href="#login" class="page-scroll">Login</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
@@ -66,8 +63,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2 intro-text">
-            <h1>We Are Interact<span></span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.</p>
+            <h1>Pendaftaran Nikah Online<span></span></h1>
+            <p>KUA Payakumbuh Timur</p>
             <a href="#features" class="btn btn-custom btn-lg page-scroll">Learn More</a> </div>
         </div>
       </div>
@@ -104,7 +101,7 @@
 <div id="about">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-md-6"> <img src="{{ url_for('static', filename='img/about.jpg') }}" class="img-responsive" alt=""> </div>
+      <div class="col-xs-12 col-md-6"> <img src="{{ url_for('static', filename='home/img/about.jpg') }}" class="img-responsive" alt=""> </div>
       <div class="col-xs-12 col-md-6">
         <div class="about-text">
           <h2>About Us</h2>
@@ -135,17 +132,12 @@
 </div>
 
 <!-- Footer Section -->
-<div id="footer">
-  <div class="container text-center">
-    <p>&copy; 2017 Interact. Design by <a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a></p>
-  </div>
-</div>
-<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.1.11.1.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/SmoothScroll.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/nivo-lightbox.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/jqBootstrapValidation.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/contact_me.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='home/js/jquery.1.11.1.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='home/js/bootstrap.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='home/js/SmoothScroll.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='home/js/nivo-lightbox.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='home/js/jqBootstrapValidation.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='home/js/contact_me.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='home/js/main.js') }}"></script>
 </body>
 </html>
