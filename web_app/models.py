@@ -82,7 +82,7 @@ class DataCatin(db.Model):
     NIK_catin_laki_laki = Column(DECIMAL, unique=True)
     nama_catin_laki_laki = Column(String(100))
     NIK_catin_perempuan = Column(DECIMAL, unique=True)
-    nama_catin_perempuan= Column(String(100))
+    nama_catin_perempuan = Column(String(100))
     jadwal_nikah = Column(Date)
     jam = Column(Time)
     tempat_pelaksaan_nikah = Column(String)

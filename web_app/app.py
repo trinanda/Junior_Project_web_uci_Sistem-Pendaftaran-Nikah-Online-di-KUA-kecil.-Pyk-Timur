@@ -89,9 +89,13 @@ def create_app():
                     db.session.commit()
                     login_user(user)
                     login_user(user, remember=form.remember.data)
-                    return redirect(url_for('society'))
+                    if current_user.email == 'operator1@gmail.com':
+                        return redirect(url_for('operator'))
+                    # else:
+                    #     return redirect(url_for('society'))
                 else:
                     return '<h1>Invalid username or password</h1>'
+
 
         return render_template('login.html', form=form)
 
@@ -122,7 +126,6 @@ def create_app():
         except:
             pass
 
-
         id_user = current_user.id
 
         try:
@@ -134,8 +137,6 @@ def create_app():
         except:
             nik_laki_laki = 'None'
             nama_catin_laki_laki = 'None'
-
-
 
         # return render_template('society_dashboard.html', WELCOME=current_user.name)
         return render_template('society_dashboard.html', WELCOME=current_user.name, NIK_LAKI_LAKI=nik_laki_laki,
@@ -158,19 +159,20 @@ def create_app():
 
         return render_template('society_input_data.html', form=form)
 
-    # @app.route('/operator')
-    # @login_required
-    # def operator():
-    #     if 'email' in session:
-    #         name = current_user.name
-    #         all_user_data = User.query.filter_by(user_id=current_user.id)
-    #         return render_template('operator_dashboard.html', user=all_user_data, NAME=name)
-    #     else:
-    #         return redirect(url_for('index'))
+    @app.route('/operator', methods = ['GET', 'POST'])
+    @login_required
+    def operator():
+        if 'email' in session:
+            name = current_user.name
+            all_user_data = DataCatin.query.all()
+            return render_template('operator_dashboard.html', WELCOME=current_user.name, OPERATOR_DATA=all_user_data)
+        else:
+            return redirect(url_for('index'))
 
     @app.route('/operatorAddData', methods=['GET', 'POST'])
     @login_required
     def operatorAddData():
+        dataUser = User('', '', '')
         form = OperatorAddDataView(request.form)
         operator_name = current_user.name
         if request.method == 'POST':
@@ -178,12 +180,27 @@ def create_app():
                 add_jam = request.form['jam']
                 new_data = DataCatin(form.NIK_catin_laki_laki.data, form.nama_catin_laki_laki.data,
                                      form.NIK_catin_perempuan.data, form.nama_catin_perempuan.data,
-                                     form.jadwal_nikah.data, form.tempat_pelaksaan_nikah.data)
+                                     form.jadwal_nikah.data, add_jam, form.tempat_pelaksaan_nikah.data, current_user.id)
                 db.session.add(new_data)
                 db.session.commit()
-                return redirect(url_for('operator_dashboard'))
+                return redirect(url_for('operator'))
 
         return render_template('operatorAddData.html', form=form, OPERATOR_NAME=operator_name)
+
+    @app.route('/delete/<dataCantin_id>')
+    def delete(dataCantin_id):
+        data = db.session.query(DataCatin, User).join(User).filter(DataCatin.id == dataCantin_id).first()
+        if data.DataCantin.is_public:
+            return render_template('data_detail.html', dataCantin=data)
+        else:
+            try:
+                if current_user.is_authenticated and data.DataCantin.user_id == current_user.id:
+                    data = DataCatin.query.filter_by(id=dataCantin_id).first()
+                    db.session.delete(data)
+                    db.session.commit()
+            except:
+                return 'Tidak bisa delete data, karena sedang digunakan'
+        return redirect(url_for('operator'))
 
 
     return app
