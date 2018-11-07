@@ -1,8 +1,8 @@
-"""change email to unique
+"""tambah kolom status pendaftaran
 
-Revision ID: 4c88e32c2639
+Revision ID: ae2ab6262ea2
 Revises: 
-Create Date: 2018-11-06 17:01:12.562189
+Create Date: 2018-11-07 06:03:19.364921
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '4c88e32c2639'
+revision = 'ae2ab6262ea2'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -37,17 +37,18 @@ def upgrade():
     sa.Column('email', sa.String(length=100), nullable=True),
     sa.Column('password', sa.String(length=255), nullable=True),
     sa.Column('active', sa.Boolean(), nullable=True),
+    sa.Column('status_pendaftaran', sa.Enum('Sedang di proses', 'Diterima', name='status_pendaftaran'), nullable=True),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('email')
     )
     op.create_table('data_catin',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('nikCatinLakiLaki', sa.Integer(), nullable=True),
-    sa.Column('catinLakiLakiName', sa.String(length=100), nullable=True),
-    sa.Column('nikCatinPerempuan', sa.Integer(), nullable=True),
-    sa.Column('catinPerempuanName', sa.String(length=100), nullable=True),
-    sa.Column('jadwalNikah', sa.DateTime(), nullable=True),
-    sa.Column('tempatPelaksanaanNikah', sa.String(), nullable=True),
+    sa.Column('NIK_catin_laki_laki', sa.Integer(), nullable=True),
+    sa.Column('nama_catin_laki_laki', sa.String(length=100), nullable=True),
+    sa.Column('NIK_catin_perempuan', sa.Integer(), nullable=True),
+    sa.Column('nama_catin_perempuan', sa.String(length=100), nullable=True),
+    sa.Column('jadwal_nikah', sa.DateTime(), nullable=True),
+    sa.Column('tempat_pelaksaan_nikah', sa.String(), nullable=True),
     sa.Column('user_id', sa.Integer(), nullable=True),
     sa.ForeignKeyConstraint(['user_id'], ['user.id'], ),
     sa.PrimaryKeyConstraint('id')

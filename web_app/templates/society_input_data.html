@@ -1,0 +1,105 @@
+{% extends "society_dashboard.html" %}
+
+ {% block content %}
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Informasi</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="Log Out">Log Out</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="{{ url_for('society') }}">Overview <span class="sr-only">(current)</span></a></li>
+            <li class="#"><a href="#">Masukan Data <span class="sr-only">(current)</span></a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+          <h2 class="sub-header">Masukan Data Anda</h2>
+          <div class="table-responsive">
+              <form action="{{url_for('societyInputData')}}" method="post" enctype="multipart/form-data">
+                  {{ form.csrf_token }}
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>NIK Laki-laki</th>
+                <tr>
+                <tr>
+                    <td>
+                        {{ form.NIK_catin_laki_laki(placeholder="") }}
+                    </td>
+                 </tr>
+                <tr>
+                  <th>Nama Catin Laki-laki</th>
+                <tr>
+                <tr>
+                    <td>
+                        {{ form.nama_catin_laki_laki(placeholder="") }}
+                    </td>
+                 </tr>
+                <tr>
+                  <th>NIK Perempuan</th>
+                <tr>
+                <tr>
+                    <td>
+                        {{ form.NIK_catin_perempuan(placeholder="") }}
+                    </td>
+                 </tr>
+                <tr>
+                  <th>Nama Catin Perempuan</th>
+                <tr>
+                <tr>
+                    <td>
+                        {{ form.nama_catin_perempuan(placeholder="") }}
+                    </td>
+                 </tr>
+                <tr>
+                  <th>Jadwal Nikah</th>
+                <tr>
+                <tr>
+                    <td>
+                        {{ form.jadwal_nikah(placeholder="") }}
+                    </td>
+                 </tr>
+                <tr>
+                  <th>Jam</th>
+                <tr>
+                <tr>
+                    <td>
+                        <input type="time" name="jam">
+                    </td>
+                 </tr>
+                <tr>
+                  <th>Tempat Pelaksanaan Nikah</th>
+                <tr>
+                <tr>
+                    <td>
+                        {{ form.tempat_pelaksaan_nikah(placeholder="") }}
+                    </td>
+                 </tr>
+
+              </thead>
+            </table>
+                  <input type="reset" value="Reset" class="btn btn-danger">
+                  <input type="submit" value="Selesai" class="btn btn-success">
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

@@ -1,5 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, VARCHAR, Enum, Boolean, Date, Time
+from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, VARCHAR, Enum, Boolean, Date, Time, DECIMAL
 from flask_security import RoleMixin, UserMixin
 from sqlalchemy.orm import relationship, backref
 
@@ -36,6 +36,11 @@ class User(db.Model, UserMixin):
     active = Column(Boolean())
     roles = relationship('Role', secondary=roles_users,
                          backref=backref('users', lazy='dynamic'))
+
+    ON_PROCESS = 'Sedang di proses'
+    ACCEPTED = 'Diterima'
+
+    status_pendaftaran = Column(Enum(ON_PROCESS, ACCEPTED, name='status_pendaftaran', default=ON_PROCESS))
 
     def __init__(self, name='', email='', password='', active=False):
         self.name = name
@@ -74,12 +79,25 @@ class Content(db.Model):
 # Data Catin
 class DataCatin(db.Model):
     id = Column(Integer, primary_key=True)
-    NIK_catin_laki_laki = Column(Integer)
+    NIK_catin_laki_laki = Column(DECIMAL, unique=True)
     nama_catin_laki_laki = Column(String(100))
-    NIK_catin_perempuan = Column(Integer)
+    NIK_catin_perempuan = Column(DECIMAL, unique=True)
     nama_catin_perempuan= Column(String(100))
-    jadwal_nikah = Column(DateTime)
+    jadwal_nikah = Column(Date)
+    jam = Column(Time)
     tempat_pelaksaan_nikah = Column(String)
 
     user_id = Column(Integer, ForeignKey(User.id))
+
+
+    def __init__(self, NIK_catin_laki_laki='', nama_catin_laki_laki='', NIK_catin_perempuan='',
+                 nama_catin_perempuan='', jadwal_nikah='', jam='', tempat_pelaksaan_nikah='', user_id=''):
+        self.NIK_catin_laki_laki = NIK_catin_laki_laki
+        self.nama_catin_laki_laki = nama_catin_laki_laki
+        self.NIK_catin_perempuan = NIK_catin_perempuan
+        self.nama_catin_perempuan = nama_catin_perempuan
+        self.jadwal_nikah = jadwal_nikah
+        self.jam = jam
+        self.tempat_pelaksaan_nikah = tempat_pelaksaan_nikah
+        self.user_id = user_id
 

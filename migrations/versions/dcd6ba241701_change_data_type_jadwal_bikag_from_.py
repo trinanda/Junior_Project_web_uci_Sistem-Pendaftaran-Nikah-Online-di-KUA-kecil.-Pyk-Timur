@@ -1,8 +1,8 @@
-"""chane table dataCatin to DataCatin
+"""change data type jadwal_bikag from datetiem to date
 
-Revision ID: 477eb05c3dd9
-Revises: f889c272e3ae
-Create Date: 2018-11-07 04:09:06.541881
+Revision ID: dcd6ba241701
+Revises: ae2ab6262ea2
+Create Date: 2018-11-07 10:02:32.784399
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '477eb05c3dd9'
-down_revision = 'f889c272e3ae'
+revision = 'dcd6ba241701'
+down_revision = 'ae2ab6262ea2'
 branch_labels = None
 depends_on = None
 

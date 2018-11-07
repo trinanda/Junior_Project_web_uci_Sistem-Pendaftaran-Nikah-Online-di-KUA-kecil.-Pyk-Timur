@@ -8,8 +8,7 @@ Dashboard
 {{super()}}
 <link rel="stylesheet" href="{{ url_for('.static', filename='society/dashboard.css') }}">
 {% endblock %}
-
-{% block content %}
+ {% block content %}
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -40,29 +39,35 @@ Dashboard
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-            <li class="#"><a href="{{ url_for('userinputdata') }}">Masukan Data <span class="sr-only">(current)</span></a></li>
+            <li class="#"><a href="{{ url_for('societyInputData') }}">Masukan Data <span class="sr-only">(current)</span></a></li>
 
           </ul>
 
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Welcome, testing123</h1>
+          <h1 class="page-header">Welcome, {{ WELCOME }}</h1>
 
 
-          <h2 class="sub-header">testing123</h2>
+          <h2 class="sub-header">Data Anda</h2>
           <div class="table-responsive">
+
+
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>NPM</th>
-                  <th>Nama Mahasiswa</th>
-                  <th>Jurusan</th>
-                  <th>Jumlah Dibayar</th>
-                  <th>Status Pembayaran</th>
+                  <th>NIK Laki-laki</th>
+                  <th>Nama Catin Laki-lai</th>
+                  <th>NIK Perempuan</th>
+                  <th>Nama Catin Perempuan</th>
+                  <th>Jadwal Nikah</th>
+                  <th>Tempat Pelaksanaan Nikah</th>
+                  <th>Status Pendaftaran</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
+                  <td>{{ NIK_LAKI_LAKI }}</td>
+                  <td>{{ NAMA_CATIN_LAKI_LAKI }}</td>
                   <td>testing123</td>
                   <td>testing123</td>
                   <td>testing123</td>
@@ -71,6 +76,7 @@ Dashboard
                 </tr>
               </tbody>
             </table>
+
           </div>
         </div>
       </div>

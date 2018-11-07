@@ -11,7 +11,7 @@ from flask_security.utils import verify_password
 import pdfkit
 from models import db, Content, Role, User, DataCatin
 from views import MyModelView, ContentView, dataCatinView
-from form import RegisterFormView, LoginFormView
+from form import RegisterFormView, LoginFormView, SocietyInputDataView, OperatorAddDataView
 def create_app():
 
     app = Flask(__name__)
@@ -20,7 +20,7 @@ def create_app():
 
     db.init_app(app)
 
-    url_index = 'http://127.0.0.1:9999/'
+    url_index = 'http://127.0.0.1:8716/'
 
     bootstrap = Bootstrap(app)
     login_manager = LoginManager()
@@ -76,7 +76,7 @@ def create_app():
 
         return render_template('register.html', form=form)
 
-    @app.route('/login')
+    @app.route('/login', methods = ['GET', 'POST'])
     def login():
         form = LoginFormView(request.form)
         if request.method == 'POST':
@@ -89,23 +89,101 @@ def create_app():
                     db.session.commit()
                     login_user(user)
                     login_user(user, remember=form.remember.data)
-                    return redirect(url_for('dashboard'))
+                    return redirect(url_for('society'))
                 else:
                     return '<h1>Invalid username or password</h1>'
 
         return render_template('login.html', form=form)
-        return render_template('login.html')
+
+    @app.route('/logout')
+    @login_required
+    def logout():
+        logout_user()
+        return redirect(url_for('index'))
 
     @app.route('/society')
+    @login_required
     def society():
-        return render_template('society_dashboard.html')
+        dataUser = User('', '', '')
+        if dataUser is not None:
+            pesan_pedaftaran = current_user.status_pendaftaran
+            try:
+                if pesan_pedaftaran == 'Terdaftar':
+                    pesan_pedaftaran = 'Selamat ' + current_user.name + ' Anda telah terdaftar'
+                else:
+                    pesan_pedaftaran = 'Anda belum melakukan pedaftaran ' + current_user.name + ' Silahkan melakukan pedaftaran'
+            except:
+                pesan_pedaftaran = str('Data Belum di inputkan')
 
-    @app.route('/userinputdata')
-    def userinputdata():
-        return render_template('user_input_data.html')
+        try:
+            status_pendaftaran = current_user.status_pendaftaran
+            if status_pendaftaran is None:
+                status_pendaftaran = 'Status pedaftaran Anda belum di update'
+        except:
+            pass
 
-    @app.route('/operator')
-    def operator():
-        return render_template('operator_dashboard')
+
+        id_user = current_user.id
+
+        try:
+            result, nik_laki_laki = db.session.query(User, DataCatin.NIK_catin_laki_laki).join(DataCatin).\
+                filter(DataCatin.user_id == current_user.id).first()
+            result2, nama_catin_laki_laki = db.session.query(User, DataCatin.nama_catin_laki_laki).join(DataCatin).\
+                filter(DataCatin.user_id == current_user.id).first()
+            name = current_user.email
+        except:
+            nik_laki_laki = 'None'
+            nama_catin_laki_laki = 'None'
+
+
+
+        # return render_template('society_dashboard.html', WELCOME=current_user.name)
+        return render_template('society_dashboard.html', WELCOME=current_user.name, NIK_LAKI_LAKI=nik_laki_laki,
+                               NAMA_CATIN_LAKI_LAKI=nama_catin_laki_laki)
+
+
+    @app.route('/societyinputdata', methods = ['GET', 'POST'])
+    @login_required
+    def societyInputData():
+        form = SocietyInputDataView(request.form)
+        if request.method == 'POST':
+            if form.validate_on_submit():
+                add_jam = request.form['jam']
+                new_data = DataCatin(form.NIK_catin_laki_laki.data, form.nama_catin_laki_laki.data,
+                                     form.NIK_catin_perempuan.data, form.nama_catin_perempuan.data,
+                                     form.jadwal_nikah.data, add_jam, form.tempat_pelaksaan_nikah.data, current_user.id)
+                db.session.add(new_data)
+                db.session.commit()
+                return redirect(url_for('society'))
+
+        return render_template('society_input_data.html', form=form)
+
+    # @app.route('/operator')
+    # @login_required
+    # def operator():
+    #     if 'email' in session:
+    #         name = current_user.name
+    #         all_user_data = User.query.filter_by(user_id=current_user.id)
+    #         return render_template('operator_dashboard.html', user=all_user_data, NAME=name)
+    #     else:
+    #         return redirect(url_for('index'))
+
+    @app.route('/operatorAddData', methods=['GET', 'POST'])
+    @login_required
+    def operatorAddData():
+        form = OperatorAddDataView(request.form)
+        operator_name = current_user.name
+        if request.method == 'POST':
+            if form.validate_on_submit():
+                add_jam = request.form['jam']
+                new_data = DataCatin(form.NIK_catin_laki_laki.data, form.nama_catin_laki_laki.data,
+                                     form.NIK_catin_perempuan.data, form.nama_catin_perempuan.data,
+                                     form.jadwal_nikah.data, form.tempat_pelaksaan_nikah.data)
+                db.session.add(new_data)
+                db.session.commit()
+                return redirect(url_for('operator_dashboard'))
+
+        return render_template('operatorAddData.html', form=form, OPERATOR_NAME=operator_name)
+
 
     return app
