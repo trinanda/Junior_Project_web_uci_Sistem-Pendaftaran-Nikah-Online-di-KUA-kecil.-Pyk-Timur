@@ -86,6 +86,7 @@ class DataCatin(db.Model):
     nama_catin_laki_laki = Column(String(100))
     NIK_catin_perempuan = Column(DECIMAL, unique=True)
     nama_catin_perempuan = Column(String(100))
+    tanggal_daftar = Column(Date)
     jadwal_nikah = Column(Date)
     jam = Column(Time)
     tempat_pelaksaan_nikah = Column(String)
@@ -101,12 +102,13 @@ class DataCatin(db.Model):
 
 
     def __init__(self, NIK_catin_laki_laki='', nama_catin_laki_laki='', NIK_catin_perempuan='',
-                 nama_catin_perempuan='', jadwal_nikah='', jam='', tempat_pelaksaan_nikah='', user_id='', is_public=False,
+                 nama_catin_perempuan='', tanggal_daftar='', jadwal_nikah='', jam='', tempat_pelaksaan_nikah='', user_id='', is_public=False,
                  status_pendaftaran=ON_PROCESS):
         self.NIK_catin_laki_laki = NIK_catin_laki_laki
         self.nama_catin_laki_laki = nama_catin_laki_laki
         self.NIK_catin_perempuan = NIK_catin_perempuan
         self.nama_catin_perempuan = nama_catin_perempuan
+        self.tanggal_daftar = tanggal_daftar
         self.jadwal_nikah = jadwal_nikah
         self.jam = jam
         self.tempat_pelaksaan_nikah = tempat_pelaksaan_nikah

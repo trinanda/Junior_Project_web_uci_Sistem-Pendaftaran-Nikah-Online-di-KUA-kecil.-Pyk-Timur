@@ -202,14 +202,15 @@ def create_app():
                 add_jam = request.form['jam']
                 new_data = DataCatin(form.NIK_catin_laki_laki.data, form.nama_catin_laki_laki.data,
                                      form.NIK_catin_perempuan.data, form.nama_catin_perempuan.data,
-                                     form.jadwal_nikah.data, add_jam, form.tempat_pelaksaan_nikah.data,
-                                     current_user.id, False, form.status_pendaftaran.data)
+                                     form.tanggal_daftar.data, form.jadwal_nikah.data, add_jam,
+                                     form.tempat_pelaksaan_nikah.data, current_user.id, False,
+                                     form.status_pendaftaran.data)
                 db.session.add(new_data)
-                db.session.commit()
-                # try:
-                #     db.session.commit()
-                # except:
-                #     return 'Data yang dimasukan sudah ada, mohon diulangi!!!'
+                # db.session.commit()
+                try:
+                    db.session.commit()
+                except:
+                    return 'Data yang dimasukan sudah ada, mohon diulangi!!!'
                 return redirect(url_for('operator'))
 
         return render_template('operatorAddData.html', form=form, OPERATOR_NAME=operator_name)
@@ -242,6 +243,7 @@ def create_app():
                     new_name_L = form.nama_catin_laki_laki.data
                     new_nik_P = form.NIK_catin_perempuan.data
                     new_name_P = form.nama_catin_perempuan.data
+                    new_tanggal_daftar = form.tanggal_daftar.data
                     new_jadwal = form.jadwal_nikah.data
                     new_jam = request.form['jam']
                     new_tempat_pelaksaan_nikah = form.tempat_pelaksaan_nikah.data
@@ -252,6 +254,7 @@ def create_app():
                         data.NIK_catin_perempuan = new_nik_P
                         data.nama_catin_perempuan = new_name_P
                         data.jadwal_nikah = new_jadwal
+                        data.tanggal_daftar = new_tanggal_daftar
                         data.jam = new_jam
                         data.tempat_pelaksaan_nikah = new_tempat_pelaksaan_nikah
                         data.status_pendaftaran = new_status_pendaftaran
