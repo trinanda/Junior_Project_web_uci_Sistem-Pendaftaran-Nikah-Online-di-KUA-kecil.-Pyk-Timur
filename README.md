@@ -3,6 +3,5 @@
 
 
 ##### saat ini yang kurang (yang terpikirkan saat ini)
-###### - memisahkan login antara user dan operator
 ###### - operator download report
 ###### - pesan pada beranda

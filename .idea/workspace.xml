@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8335985c-1e1b-4534-b227-100bfe4ee3c1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/000-percobaan/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/templates/edit_catin.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/templates/edit_catin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_app/templates/index_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/templates/index_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/templates/operatorAddData.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/templates/operatorAddData.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/templates/operator_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/templates/operator_dashboard.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,11 +31,11 @@
         <counts>
           <entry key="Dockerfile" value="1" />
           <entry key="css" value="5" />
-          <entry key="html" value="50" />
+          <entry key="html" value="52" />
           <entry key="ini" value="2" />
           <entry key="mako" value="1" />
-          <entry key="md" value="7" />
-          <entry key="py" value="26" />
+          <entry key="md" value="8" />
+          <entry key="py" value="28" />
           <entry key="sh" value="1" />
           <entry key="txt" value="2" />
           <entry key="yml" value="4" />
@@ -51,21 +46,21 @@
           <entry key="Bash" value="1" />
           <entry key="CSS" value="5" />
           <entry key="Dockerfile" value="1" />
-          <entry key="HTML" value="50" />
+          <entry key="HTML" value="52" />
           <entry key="Hoi4 file" value="2" />
-          <entry key="Markdown" value="7" />
+          <entry key="Markdown" value="8" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="26" />
+          <entry key="Python" value="28" />
           <entry key="YAML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Dockerfile" value="114" />
-          <entry key="html" value="2231" />
+          <entry key="html" value="2317" />
           <entry key="ini" value="18" />
-          <entry key="md" value="342" />
-          <entry key="py" value="6140" />
+          <entry key="md" value="344" />
+          <entry key="py" value="6512" />
           <entry key="sh" value="30" />
           <entry key="txt" value="3" />
           <entry key="yml" value="429" />
@@ -75,11 +70,11 @@
         <counts>
           <entry key="Bash" value="30" />
           <entry key="Dockerfile" value="114" />
-          <entry key="HTML" value="2231" />
+          <entry key="HTML" value="2317" />
           <entry key="Hoi4 file" value="3" />
-          <entry key="Markdown" value="342" />
+          <entry key="Markdown" value="344" />
           <entry key="PLAIN_TEXT" value="18" />
-          <entry key="Python" value="6140" />
+          <entry key="Python" value="6512" />
           <entry key="YAML" value="429" />
         </counts>
       </usages-collector>
@@ -87,35 +82,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web_app/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="207" column="35" lean-forward="true" selection-start-line="207" selection-start-column="35" selection-end-line="207" selection-end-column="35" />
-              <folding>
-                <marker date="1541673792434" expanded="true" signature="738:739" ph="..." />
-                <marker date="1541673792434" expanded="true" signature="1793:12174" ph="..." />
-                <marker date="1541673792434" expanded="true" signature="8316:8325" ph="..." />
-                <marker date="1541673792434" expanded="true" signature="8316:12174" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_app/templates/edit_catin.html">
+        <entry file="file://$PROJECT_DIR$/000-percobaan/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="106" column="40" lean-forward="true" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_app/templates/operatorAddData.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="99" column="50" selection-start-line="99" selection-start-column="32" selection-end-line="99" selection-end-column="50" />
+            <state relative-caret-position="225">
+              <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -123,35 +94,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_app/templates/operator_dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-300">
-              <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+            <state relative-caret-position="195">
+              <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_app/models.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web_app/templates/index_page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="86" column="48" selection-start-line="86" selection-start-column="42" selection-end-line="86" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-                <marker date="1541671526217" expanded="true" signature="1436:1442" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_app/form.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="59" column="51" lean-forward="true" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-                <marker date="1541673254139" expanded="true" signature="423:428" ph="..." />
-                <marker date="1541673254139" expanded="true" signature="1160:1165" ph="..." />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="94" column="82" selection-start-line="94" selection-start-column="82" selection-end-line="94" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -161,20 +114,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>column_list</find>
       <find>index</find>
       <find>logout</find>
       <find>Log</find>
       <find>log</find>
       <find>operatorAddData</find>
-      <find>is_public</find>
       <find>delete</find>
       <find>delete_delete</find>
       <find>cantin</find>
@@ -198,6 +149,8 @@
       <find>Masukan Data Anda</find>
       <find>operator</find>
       <find>SelectField</find>
+      <find>is_public</find>
+      <find>feat</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -230,14 +183,15 @@
         <option value="$PROJECT_DIR$/migrations/versions/83f5b0df3839_add_colom_is_public2.py" />
         <option value="$PROJECT_DIR$/web_app/templates/society_dashboard.html" />
         <option value="$PROJECT_DIR$/web_app/templates/edit_data.html" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/web_app/templates/index_page.html" />
         <option value="$PROJECT_DIR$/web_app/models.py" />
         <option value="$PROJECT_DIR$/web_app/templates/edit_catin.html" />
         <option value="$PROJECT_DIR$/web_app/form.py" />
-        <option value="$PROJECT_DIR$/web_app/templates/operator_dashboard.html" />
         <option value="$PROJECT_DIR$/web_app/templates/operatorAddData.html" />
         <option value="$PROJECT_DIR$/web_app/app.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/000-percobaan/app.py" />
+        <option value="$PROJECT_DIR$/web_app/templates/operator_dashboard.html" />
+        <option value="$PROJECT_DIR$/web_app/templates/index_page.html" />
       </list>
     </option>
   </component>
@@ -309,6 +263,34 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Junior_Project_web_uci_Sistem-Pendaftaran-Nikah-Online-di-KUA-kecil.-Pyk-Timur" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/000-percobaan" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/000-percobaan/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -326,12 +308,12 @@
     <frame x="1366" y="34" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23596358" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26858878" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32888147" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32888147" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -339,7 +321,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007587" side_tool="true" weight="0.29382303" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49924126" visible="true" weight="0.32220367" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924126" visible="true" weight="0.32220367" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -513,20 +495,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web_app/form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="59" column="51" lean-forward="true" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+            <marker date="1541673254139" expanded="true" signature="423:428" ph="..." />
+            <marker date="1541673254139" expanded="true" signature="1160:1165" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_app/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="205" column="89" lean-forward="true" selection-start-line="205" selection-start-column="89" selection-end-line="205" selection-end-column="89" />
+          <folding>
+            <marker date="1541674150086" expanded="true" signature="738:739" ph="..." />
+            <marker date="1541674150086" expanded="true" signature="1793:12181" ph="..." />
+            <marker date="1541674150086" expanded="true" signature="8316:8325" ph="..." />
+            <marker date="1541674150086" expanded="true" signature="8316:12181" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="75">
-            <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+            <caret line="5" selection-start-line="5" selection-end-line="5" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_app/templates/index_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="55" column="30" lean-forward="true" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -546,8 +546,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web_app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="86" column="48" selection-start-line="86" selection-start-column="42" selection-end-line="86" selection-end-column="48" />
+        <state relative-caret-position="16">
+          <caret line="94" column="13" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="13" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <marker date="1541671526217" expanded="true" signature="1436:1442" ph="..." />
@@ -555,35 +555,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_app/form.py">
+    <entry file="file://$PROJECT_DIR$/000-percobaan/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="59" column="51" lean-forward="true" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-            <marker date="1541673254139" expanded="true" signature="423:428" ph="..." />
-            <marker date="1541673254139" expanded="true" signature="1160:1165" ph="..." />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web_app/templates/operator_dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+        <state relative-caret-position="195">
+          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_app/app.py">
+    <entry file="file://$PROJECT_DIR$/web_app/templates/index_page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="207" column="35" lean-forward="true" selection-start-line="207" selection-start-column="35" selection-end-line="207" selection-end-column="35" />
-          <folding>
-            <marker date="1541673792434" expanded="true" signature="738:739" ph="..." />
-            <marker date="1541673792434" expanded="true" signature="1793:12174" ph="..." />
-            <marker date="1541673792434" expanded="true" signature="8316:8325" ph="..." />
-            <marker date="1541673792434" expanded="true" signature="8316:12174" ph="..." />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="94" column="82" selection-start-line="94" selection-start-column="82" selection-end-line="94" selection-end-column="82" />
         </state>
       </provider>
     </entry>
