@@ -42,3 +42,13 @@ class OperatorAddDataView(FlaskForm):
     nama_catin_perempuan = StringField('', validators=[DataRequired()], render_kw={"placeholder": "Nama Catin Perempuan"})
     jadwal_nikah = DateField('Jadwal Nikah', format='%Y-%m-%d', validators=[DataRequired()])
     tempat_pelaksaan_nikah = StringField('', validators=[DataRequired()], render_kw={"placeholder": "Tempat Pelaksanaan Nikah"})
+
+
+
+class EditCatin(FlaskForm):
+    NIK_catin_laki_laki = DecimalField('')
+    nama_catin_laki_laki = StringField('')
+    NIK_catin_perempuan = DecimalField('')
+    nama_catin_perempuan = StringField('')
+    jadwal_nikah = DateField('Jadwal Nikah', format='%Y-%m-%d')
+    tempat_pelaksaan_nikah = StringField('')

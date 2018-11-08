@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8335985c-1e1b-4534-b227-100bfe4ee3c1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/web_app/templates/edit_catin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/44314aaf8ade_change_nik_from_integer_to_decimal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/aaee3e81cc53_change_datatype_nik_from_integer_to_.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/ae2ab6262ea2_tambah_kolom_status_pendaftaran.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/d1f660dbe03c_change_nik_to_unique.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/dcd6ba241701_change_data_type_jadwal_bikag_from_.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/fb3ac8543383_add_kolom_jam.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/templates/edit_data.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web_app/templates/operator_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/templates/operator_dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/templates/society_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/templates/society_dashboard.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,10 +34,10 @@
         <counts>
           <entry key="Dockerfile" value="1" />
           <entry key="css" value="5" />
-          <entry key="html" value="44" />
+          <entry key="html" value="46" />
           <entry key="ini" value="2" />
           <entry key="mako" value="1" />
-          <entry key="md" value="4" />
+          <entry key="md" value="5" />
           <entry key="py" value="25" />
           <entry key="sh" value="1" />
           <entry key="txt" value="2" />
@@ -53,9 +49,9 @@
           <entry key="Bash" value="1" />
           <entry key="CSS" value="5" />
           <entry key="Dockerfile" value="1" />
-          <entry key="HTML" value="44" />
+          <entry key="HTML" value="46" />
           <entry key="Hoi4 file" value="2" />
-          <entry key="Markdown" value="4" />
+          <entry key="Markdown" value="5" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="Python" value="25" />
           <entry key="YAML" value="4" />
@@ -64,10 +60,10 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Dockerfile" value="114" />
-          <entry key="html" value="2023" />
+          <entry key="html" value="2151" />
           <entry key="ini" value="18" />
-          <entry key="md" value="204" />
-          <entry key="py" value="4932" />
+          <entry key="md" value="337" />
+          <entry key="py" value="5631" />
           <entry key="sh" value="30" />
           <entry key="txt" value="3" />
           <entry key="yml" value="429" />
@@ -77,11 +73,11 @@
         <counts>
           <entry key="Bash" value="30" />
           <entry key="Dockerfile" value="114" />
-          <entry key="HTML" value="2023" />
+          <entry key="HTML" value="2151" />
           <entry key="Hoi4 file" value="3" />
-          <entry key="Markdown" value="204" />
+          <entry key="Markdown" value="337" />
           <entry key="PLAIN_TEXT" value="18" />
-          <entry key="Python" value="4932" />
+          <entry key="Python" value="5631" />
           <entry key="YAML" value="429" />
         </counts>
       </usages-collector>
@@ -89,44 +85,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_app/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="204" column="76" selection-start-line="204" selection-start-column="76" selection-end-line="204" selection-end-column="76" />
+            <state relative-caret-position="153">
+              <caret line="280" column="42" selection-start-line="280" selection-start-column="42" selection-end-line="280" selection-end-column="42" />
               <folding>
-                <marker date="1541648867314" expanded="true" signature="727:728" ph="..." />
-                <marker date="1541648867314" expanded="true" signature="1782:10293" ph="..." />
-                <marker date="1541648867314" expanded="true" signature="8031:8040" ph="..." />
-                <marker date="1541648867314" expanded="true" signature="8031:10293" ph="..." />
+                <marker date="1541669009446" expanded="true" signature="738:739" ph="..." />
+                <marker date="1541669009446" expanded="true" signature="1793:13712" ph="..." />
+                <marker date="1541669009446" expanded="true" signature="8042:8051" ph="..." />
+                <marker date="1541669009446" expanded="true" signature="8042:13712" ph="..." />
+                <marker date="1541669009446" expanded="true" signature="10486:11975" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_app/templates/operator_dashboard.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web_app/templates/edit_catin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="67" column="34" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="34" />
+            <state relative-caret-position="-42">
+              <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_app/templates/society_dashboard.html">
+        <entry file="file://$PROJECT_DIR$/web_app/templates/theme.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="74" column="43" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_app/templates/operatorAddData.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+            <state relative-caret-position="139">
+              <caret line="157" column="28" selection-start-line="157" selection-start-column="28" selection-end-line="157" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -134,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="77" column="6" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="6" />
+            <state relative-caret-position="169">
+              <caret line="84" column="26" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="26" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -144,14 +132,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_app/templates/operator_dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="77" column="57" selection-start-line="77" selection-start-column="57" selection-end-line="77" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_app/form.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="37" column="25" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="25" />
+            <state relative-caret-position="281">
+              <caret line="53" column="44" lean-forward="true" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
-                <marker date="1541606606260" expanded="true" signature="423:428" ph="..." />
-                <marker date="1541606606260" expanded="true" signature="1160:1165" ph="..." />
+                <marker date="1541656995294" expanded="true" signature="423:428" ph="..." />
+                <marker date="1541656995294" expanded="true" signature="1160:1165" ph="..." />
               </folding>
             </state>
           </provider>
@@ -169,12 +166,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dashbiar</find>
-      <find>dashboard</find>
-      <find>user_profile</find>
-      <find>tamba</find>
-      <find>tambah_rute</find>
-      <find>masukan</find>
       <find>user</find>
       <find>userinput</find>
       <find>if</find>
@@ -189,7 +180,6 @@
       <find>Log</find>
       <find>log</find>
       <find>operatorAddData</find>
-      <find>rute</find>
       <find>is_public</find>
       <find>delete</find>
       <find>delete_delete</find>
@@ -198,7 +188,14 @@
       <find>DataCatin</find>
       <find>user_</find>
       <find>dataCatin_id</find>
+      <find>operator2@gmail.com</find>
+      <find>EditRuteForm</find>
+      <find>page-header</find>
+      <find>edit</find>
       <find>delete_data</find>
+      <find>rute</find>
+      <find>catin</find>
+      <find>catin_id</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -229,14 +226,16 @@
         <option value="$PROJECT_DIR$/web_app/views.py" />
         <option value="$PROJECT_DIR$/web_app/templates/society_input_data.html" />
         <option value="$PROJECT_DIR$/web_app/templates/index_page.html" />
-        <option value="$PROJECT_DIR$/web_app/form.py" />
         <option value="$PROJECT_DIR$/web_app/templates/operatorAddData.html" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/migrations/versions/83f5b0df3839_add_colom_is_public2.py" />
         <option value="$PROJECT_DIR$/web_app/templates/society_dashboard.html" />
         <option value="$PROJECT_DIR$/web_app/models.py" />
+        <option value="$PROJECT_DIR$/web_app/form.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/web_app/templates/edit_data.html" />
         <option value="$PROJECT_DIR$/web_app/templates/operator_dashboard.html" />
         <option value="$PROJECT_DIR$/web_app/app.py" />
+        <option value="$PROJECT_DIR$/web_app/templates/edit_catin.html" />
       </list>
     </option>
   </component>
@@ -258,17 +257,6 @@
             <path>
               <item name="Sistem-Pendaftaran-Nikah-Online-di-KUA-kecil.-Pyk-Timur" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sistem-Pendaftaran-Nikah-Online-di-KUA-kecil.-Pyk-Timur" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sistem-Pendaftaran-Nikah-Online-di-KUA-kecil.-Pyk-Timur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sistem-Pendaftaran-Nikah-Online-di-KUA-kecil.-Pyk-Timur" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sistem-Pendaftaran-Nikah-Online-di-KUA-kecil.-Pyk-Timur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sistem-Pendaftaran-Nikah-Online-di-KUA-kecil.-Pyk-Timur" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-              <item name="versions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Sistem-Pendaftaran-Nikah-Online-di-KUA-kecil.-Pyk-Timur" type="b2602c69:ProjectViewProjectNode" />
@@ -334,6 +322,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="34" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23596358" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -348,7 +337,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007587" side_tool="true" weight="0.29382303" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49924126" visible="true" weight="0.2821369" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49924126" visible="true" weight="0.2721202" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -452,9 +441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_app/templates/edit_data.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -480,13 +466,6 @@
     <entry file="file://$PROJECT_DIR$/migrations/versions/7ba00c2cca8b_tambah_kolom_status_pendaftaran.py" />
     <entry file="file://$PROJECT_DIR$/migrations/versions/331b29b54de8_tambah_kolom_status_pendaftaran.py" />
     <entry file="file://$PROJECT_DIR$/web_app/templates/tambah_data.html" />
-    <entry file="file://$PROJECT_DIR$/web_app/templates/theme.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="70" column="54" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web_app/templates/index_page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -508,28 +487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_app/form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="37" column="25" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-            <marker date="1541606606260" expanded="true" signature="423:428" ph="..." />
-            <marker date="1541606606260" expanded="true" signature="1160:1165" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="120">
-            <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/migrations/versions/ec47554720b0_add_colom_is_public.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-213" />
@@ -542,13 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_app/templates/operatorAddData.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web_app/templates/society_dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -556,33 +506,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_app/templates/operator_dashboard.html">
+    <entry file="file://$PROJECT_DIR$/web_app/templates/operatorAddData.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="67" column="34" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="34" />
+        <state relative-caret-position="-270">
+          <caret line="38" column="20" lean-forward="true" selection-end-line="104" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_app/form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="53" column="44" lean-forward="true" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+            <marker date="1541656995294" expanded="true" signature="423:428" ph="..." />
+            <marker date="1541656995294" expanded="true" signature="1160:1165" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="135">
+            <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web_app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="77" column="6" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="6" />
+        <state relative-caret-position="169">
+          <caret line="84" column="26" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="26" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web_app/templates/theme.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="157" column="28" selection-start-line="157" selection-start-column="28" selection-end-line="157" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_app/templates/operator_dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="77" column="57" selection-start-line="77" selection-start-column="57" selection-end-line="77" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web_app/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="204" column="76" selection-start-line="204" selection-start-column="76" selection-end-line="204" selection-end-column="76" />
+        <state relative-caret-position="153">
+          <caret line="280" column="42" selection-start-line="280" selection-start-column="42" selection-end-line="280" selection-end-column="42" />
           <folding>
-            <marker date="1541648867314" expanded="true" signature="727:728" ph="..." />
-            <marker date="1541648867314" expanded="true" signature="1782:10293" ph="..." />
-            <marker date="1541648867314" expanded="true" signature="8031:8040" ph="..." />
-            <marker date="1541648867314" expanded="true" signature="8031:10293" ph="..." />
+            <marker date="1541669009446" expanded="true" signature="738:739" ph="..." />
+            <marker date="1541669009446" expanded="true" signature="1793:13712" ph="..." />
+            <marker date="1541669009446" expanded="true" signature="8042:8051" ph="..." />
+            <marker date="1541669009446" expanded="true" signature="8042:13712" ph="..." />
+            <marker date="1541669009446" expanded="true" signature="10486:11975" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_app/templates/edit_catin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-42">
+          <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
         </state>
       </provider>
     </entry>

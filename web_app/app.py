@@ -11,7 +11,7 @@ from flask_security.utils import verify_password
 import pdfkit
 from models import db, Content, Role, User, DataCatin
 from views import MyModelView, ContentView, dataCatinView
-from form import RegisterFormView, LoginFormView, SocietyInputDataView, OperatorAddDataView
+from form import RegisterFormView, LoginFormView, SocietyInputDataView, OperatorAddDataView, EditCatin
 def create_app():
 
     app = Flask(__name__)
@@ -208,15 +208,15 @@ def create_app():
         return render_template('operatorAddData.html', form=form, OPERATOR_NAME=operator_name)
 
 ##################################################################################################################
-    @app.route('/delete_data/<catin_id>')
-    def delete_data(catin_id):
-        data = db.session.query(DataCatin, User).join(User).filter(DataCatin.id == catin_id).first()
+    @app.route('/delete_data/<id>')
+    def delete_data(id):
+        data = db.session.query(DataCatin, User).join(User).filter(DataCatin.id == id).first()
         if data.DataCatin.is_public:
             return render_template('catin_detail.html', catin=data)
         else:
             try:
                 if current_user.is_authenticated and data.DataCatin.user_id == current_user.id:
-                    data = DataCatin.query.filter_by(id=catin_id).first()
+                    data = DataCatin.query.filter_by(id=id).first()
                     db.session.delete(data)
                     db.session.commit()
             except:
@@ -224,5 +224,68 @@ def create_app():
         return redirect(url_for('operator'))
 
 ##################################################################################################################
+
+##################################################################################################################
+    @app.route('/edit_data/<catin_id>', methods = ['GET', 'POST'])
+    def edit_data(catin_id):
+        data = db.session.query(DataCatin, User).join(User).filter(DataCatin.id == catin_id).first()
+        form = EditCatin(request.form)
+        if request.method == 'POST':
+            if form.validate_on_submit():
+                if current_user.is_authenticated and data.DataCatin.id == current_user.id:
+                    data = DataCatin.query.filter_by(id=catin_id).first()
+                    new_nik_L = form.NIK_catin_laki_laki.data
+                    new_name_L = form.nama_catin_laki_laki.data
+                    new_nik_P = form.NIK_catin_perempuan.data
+                    new_name_P = form.nama_catin_perempuan.data
+                    new_jadwal = form.jadwal_nikah.data
+                    new_jam = request.form['jam']
+                    new_tempat_pelaksanaan = form.tempat_pelaksaan_nikah.data
+                    try:
+                        data.NIK_catin_laki_laki = new_nik_L
+                        data.nama_catin_laki_laki = new_name_L
+                        data.NIK_catin_perempuan = new_nik_P
+                        data.nama_catin_perempuan = new_name_P
+                        data.jadwal_nikah = new_jadwal
+                        data.jam = new_jam
+                        data.tempat_pelaksaan_nikah = new_tempat_pelaksanaan
+                    except Exception as e:
+                        return {'error': str(e)}
+                return redirect(url_for('operator'))
+
+        return render_template('edit_catin.html', form=form, catin=data)
+
+##################################################################################################################
+
+    @app.route('/catin_edit/<id>', methods=['GET', 'POST'])
+    def catin_edit(id):
+        data = db.session.query(DataCatin, User).join(User).filter(DataCatin.id== id).first()
+        form = EditCatin(request.form)
+        if request.method == 'POST':
+            if form.validate_on_submit():
+                if current_user.is_authenticated and data.DataCatin.user_id == current_user.id:
+                    data = DataCatin.query.filter_by(id=id).first()
+                    new_nik_L = form.NIK_catin_laki_laki.data
+                    new_name_L = form.nama_catin_laki_laki.data
+                    new_nik_P = form.NIK_catin_perempuan.data
+                    new_name_P = form.nama_catin_perempuan.data
+                    new_jadwal = form.jadwal_nikah.data
+                    new_jam = request.form['jam']
+                    new_tempat_pelaksaan_nikah = form.tempat_pelaksaan_nikah.data
+                    try:
+                        data.NIK_catin_laki_laki = new_nik_L
+                        data.nama_catin_laki_laki = new_name_L
+                        data.NIK_catin_perempuan = new_nik_P
+                        data.nama_catin_perempuan = new_name_P
+                        data.jadwal_nikah = new_jadwal
+                        data.jam = new_jam
+                        data.tempat_pelaksaan_nikah = new_tempat_pelaksaan_nikah
+                        db.session.commit()
+
+                    except Exception as e:
+                        return {'error': str(e)}
+                return redirect(url_for('operator'))
+
+        return render_template('edit_catin.html', form=form, catin=data)
 
     return app
