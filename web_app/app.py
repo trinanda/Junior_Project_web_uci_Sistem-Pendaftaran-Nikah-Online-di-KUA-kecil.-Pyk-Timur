@@ -20,7 +20,7 @@ def create_app():
 
     db.init_app(app)
 
-    url_index = 'http://127.0.0.1:8716/'
+    url_index = 'http://localhost:8716/'
 
     bootstrap = Bootstrap(app)
     login_manager = LoginManager()
@@ -82,6 +82,11 @@ def create_app():
         if request.method == 'POST':
             if form.validate_on_submit():
                 session['email'] = request.form['email']
+                takeEmail = session['email'] = request.form['email']
+                takeRoles = User.query.filter_by(email=takeEmail).first()
+                takeRoles = takeRoles.roles
+                # takeRoles = ''.join(takeRoles)
+                print('testing', takeRoles)
                 user = User.query.filter_by(email=form.email.data).first()
                 if verify_password(user.password, form.password.data):
                     user.authenticated = True
@@ -89,9 +94,9 @@ def create_app():
                     db.session.commit()
                     login_user(user)
                     login_user(user, remember=form.remember.data)
-                    if current_user.email == 'operator1@gmail.com':
+                    if takeRoles == ['user']:
                         return redirect(url_for('operator'))
-                    else:
+                    elif takeRoles == []:
                         return redirect(url_for('society'))
                 else:
                     return '<h1>Invalid username or password</h1>'
@@ -197,17 +202,19 @@ def create_app():
                 add_jam = request.form['jam']
                 new_data = DataCatin(form.NIK_catin_laki_laki.data, form.nama_catin_laki_laki.data,
                                      form.NIK_catin_perempuan.data, form.nama_catin_perempuan.data,
-                                     form.jadwal_nikah.data, add_jam, form.tempat_pelaksaan_nikah.data, current_user.id)
+                                     form.jadwal_nikah.data, add_jam, form.tempat_pelaksaan_nikah.data,
+                                     current_user.id, False, form.status_pendaftaran.data)
                 db.session.add(new_data)
-                try:
-                    db.session.commit()
-                except:
-                    return 'Data yang dimasukan sudah ada, mohon diulangi!!!'
+                db.session.commit()
+                # try:
+                #     db.session.commit()
+                # except:
+                #     return 'Data yang dimasukan sudah ada, mohon diulangi!!!'
                 return redirect(url_for('operator'))
 
         return render_template('operatorAddData.html', form=form, OPERATOR_NAME=operator_name)
 
-##################################################################################################################
+
     @app.route('/delete_data/<id>')
     def delete_data(id):
         data = db.session.query(DataCatin, User).join(User).filter(DataCatin.id == id).first()
@@ -221,7 +228,6 @@ def create_app():
                 db.session.commit()
         return redirect(url_for('operator'))
 
-##################################################################################################################
 
     @app.route('/catin_edit/<id>', methods=['GET', 'POST'])
     def catin_edit(id):
@@ -239,6 +245,7 @@ def create_app():
                     new_jadwal = form.jadwal_nikah.data
                     new_jam = request.form['jam']
                     new_tempat_pelaksaan_nikah = form.tempat_pelaksaan_nikah.data
+                    new_status_pendaftaran = form.status_pendaftaran.data
                     try:
                         data.NIK_catin_laki_laki = new_nik_L
                         data.nama_catin_laki_laki = new_name_L
@@ -247,6 +254,7 @@ def create_app():
                         data.jadwal_nikah = new_jadwal
                         data.jam = new_jam
                         data.tempat_pelaksaan_nikah = new_tempat_pelaksaan_nikah
+                        data.status_pendaftaran = new_status_pendaftaran
                         db.session.commit()
 
                     except Exception as e:

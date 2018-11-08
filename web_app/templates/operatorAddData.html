@@ -30,7 +30,7 @@
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
-          <h2 class="sub-header">Masukan Data Anda</h2>
+          <h2 class="sub-header">Masukan Data Catin</h2>
           <div class="table-responsive">
               <form action="{{url_for('operatorAddData')}}" method="post" enctype="multipart/form-data">
                   {{ form.csrf_token }}
@@ -90,6 +90,14 @@
                 <tr>
                     <td>
                         {{ form.tempat_pelaksaan_nikah(placeholder="") }}
+                    </td>
+                 </tr>
+                <tr>
+                  <th>Status Pendaftaran</th>
+                <tr>
+              <tr>
+                    <td>
+                        {{ form.status_pendaftaran(placeholder="") }}
                     </td>
                  </tr>
 

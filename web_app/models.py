@@ -26,6 +26,9 @@ class Role(db.Model, RoleMixin):
     def __str__(self):
         return self.name
 
+    def __repr__(self):
+        return self.name
+
 
 class User(db.Model, UserMixin):
     __tablename__ = 'user'
@@ -48,6 +51,9 @@ class User(db.Model, UserMixin):
 
     def __str__(self):
         return self.email
+
+    def __repr__(self):
+        return self.roles
 
     @property
     def is_active(self):

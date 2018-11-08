@@ -48,7 +48,7 @@ Dashboard
           <h1 class="page-header">Welcome, {{ WELCOME }}</h1>
 
 
-          <h2 class="sub-header">Data Anda</h2>
+          <h2 class="sub-header">Data Catin</h2>
           <div class="table-responsive">
 
 
@@ -60,8 +60,10 @@ Dashboard
                   <th>NIK Perempuan</th>
                   <th>Nama Catin Perempuan</th>
                   <th>Jadwal Nikah</th>
+                  <th>Jam</th>
                   <th>Tempat Pelaksanaan Nikah</th>
                   <th>Status Pendaftaran</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -74,6 +76,7 @@ Dashboard
                   <td>{{ list.jadwal_nikah }}</td>
                   <td>{{ list.jam }}</td>
                   <td>{{ list.tempat_pelaksaan_nikah }}</td>
+                  <td>{{ list.status_pendaftaran }}</td>
                   <td>
                     <a href="{{ url_for('delete_data', id=list.id) }}">Delete</a>
                     |

@@ -35,6 +35,10 @@ class SocietyInputDataView(FlaskForm):
 
 
 
+ON_PROCESS = 'Sedang di proses'
+ACCEPTED = 'Diterima'
+
+
 class OperatorAddDataView(FlaskForm):
     NIK_catin_laki_laki = DecimalField('', validators=[DataRequired()], render_kw={'placeholder': 'NIK Catin Laki-laki'})
     nama_catin_laki_laki = StringField('', validators=[DataRequired()], render_kw={"placeholder": "Nama Catin Laki-laki"})
@@ -42,6 +46,7 @@ class OperatorAddDataView(FlaskForm):
     nama_catin_perempuan = StringField('', validators=[DataRequired()], render_kw={"placeholder": "Nama Catin Perempuan"})
     jadwal_nikah = DateField('Jadwal Nikah', format='%Y-%m-%d', validators=[DataRequired()])
     tempat_pelaksaan_nikah = StringField('', validators=[DataRequired()], render_kw={"placeholder": "Tempat Pelaksanaan Nikah"})
+    status_pendaftaran = SelectField('status_pendaftaran', choices=[(ON_PROCESS, ON_PROCESS), (ACCEPTED, ACCEPTED)])
 
 
 
@@ -52,3 +57,4 @@ class EditCatin(FlaskForm):
     nama_catin_perempuan = StringField('')
     jadwal_nikah = DateField('Jadwal Nikah', format='%Y-%m-%d')
     tempat_pelaksaan_nikah = StringField('')
+    status_pendaftaran = SelectField('status_pendaftaran', choices=[(ON_PROCESS, ON_PROCESS), (ACCEPTED, ACCEPTED)])
