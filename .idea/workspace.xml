@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8335985c-1e1b-4534-b227-100bfe4ee3c1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/web_app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/form.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/templates/edit_catin.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/templates/edit_catin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/templates/operatorAddData.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/templates/operatorAddData.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/templates/operator_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/templates/operator_dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/templates/society_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/templates/society_dashboard.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +30,7 @@
         <counts>
           <entry key="Dockerfile" value="1" />
           <entry key="css" value="5" />
-          <entry key="html" value="55" />
+          <entry key="html" value="57" />
           <entry key="ini" value="2" />
           <entry key="mako" value="1" />
           <entry key="md" value="8" />
@@ -48,7 +45,7 @@
           <entry key="Bash" value="1" />
           <entry key="CSS" value="5" />
           <entry key="Dockerfile" value="1" />
-          <entry key="HTML" value="55" />
+          <entry key="HTML" value="57" />
           <entry key="Hoi4 file" value="2" />
           <entry key="Markdown" value="8" />
           <entry key="PLAIN_TEXT" value="3" />
@@ -59,10 +56,10 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Dockerfile" value="114" />
-          <entry key="html" value="2430" />
+          <entry key="html" value="2468" />
           <entry key="ini" value="18" />
           <entry key="md" value="344" />
-          <entry key="py" value="6553" />
+          <entry key="py" value="6635" />
           <entry key="sh" value="30" />
           <entry key="txt" value="3" />
           <entry key="yml" value="429" />
@@ -72,11 +69,11 @@
         <counts>
           <entry key="Bash" value="30" />
           <entry key="Dockerfile" value="114" />
-          <entry key="HTML" value="2430" />
+          <entry key="HTML" value="2468" />
           <entry key="Hoi4 file" value="3" />
           <entry key="Markdown" value="344" />
           <entry key="PLAIN_TEXT" value="18" />
-          <entry key="Python" value="6553" />
+          <entry key="Python" value="6635" />
           <entry key="YAML" value="429" />
         </counts>
       </usages-collector>
@@ -84,48 +81,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web_app/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="207" column="40" lean-forward="true" selection-start-line="207" selection-start-column="40" selection-end-line="207" selection-end-column="40" />
+            <state relative-caret-position="225">
+              <caret line="151" column="59" selection-start-line="151" selection-start-column="59" selection-end-line="151" selection-end-column="59" />
               <folding>
-                <marker date="1541685045927" expanded="true" signature="738:739" ph="..." />
-                <marker date="1541685045927" expanded="true" signature="1793:12238" ph="..." />
-                <marker date="1541685045927" expanded="true" signature="8316:8325" ph="..." />
-                <marker date="1541685045927" expanded="true" signature="8316:12238" ph="..." />
+                <element signature="e#1557#1730#0" />
+                <element signature="e#1929#2808#0" />
+                <element signature="e#2887#4068#0" />
+                <element signature="e#4142#4197#0" />
+                <element signature="e#9828#10358#0" />
+                <element signature="e#10453#12175#0" />
+                <marker date="1541686877778" expanded="false" signature="750:751" ph="..." />
+                <marker date="1541686877778" expanded="true" signature="1805:11952" ph="..." />
+                <marker date="1541686877778" expanded="true" signature="7899:7908" ph="..." />
+                <marker date="1541686877778" expanded="true" signature="7899:11952" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web_app/templates/edit_catin.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_app/templates/society_dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="75" column="83" selection-start-line="75" selection-start-column="83" selection-end-line="75" selection-end-column="83" />
+            <state relative-caret-position="223">
+              <caret line="76" column="25" lean-forward="true" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_app/templates/operator_dashboard.html">
+        <entry file="file://$PROJECT_DIR$/web_app/templates/society_input_data.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_app/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="110" column="44" selection-start-line="110" selection-start-column="30" selection-end-line="110" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-                <marker date="1541684926817" expanded="true" signature="1436:1442" ph="..." />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="34" column="73" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -134,11 +124,24 @@
         <entry file="file://$PROJECT_DIR$/web_app/form.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="242">
-              <caret line="58" column="12" selection-start-line="58" selection-end-line="59" />
+              <caret line="58" column="96" lean-forward="true" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="96" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
                 <marker date="1541685282750" expanded="true" signature="423:428" ph="..." />
                 <marker date="1541685282750" expanded="true" signature="1160:1165" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_app/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="88" column="18" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+                <marker date="1541686583620" expanded="true" signature="1436:1442" ph="..." />
               </folding>
             </state>
           </provider>
@@ -216,17 +219,17 @@
         <option value="$PROJECT_DIR$/web_app/views.py" />
         <option value="$PROJECT_DIR$/web_app/templates/society_input_data.html" />
         <option value="$PROJECT_DIR$/migrations/versions/83f5b0df3839_add_colom_is_public2.py" />
-        <option value="$PROJECT_DIR$/web_app/templates/society_dashboard.html" />
         <option value="$PROJECT_DIR$/web_app/templates/edit_data.html" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/000-percobaan/app.py" />
         <option value="$PROJECT_DIR$/web_app/templates/index_page.html" />
-        <option value="$PROJECT_DIR$/web_app/models.py" />
         <option value="$PROJECT_DIR$/web_app/templates/operator_dashboard.html" />
-        <option value="$PROJECT_DIR$/web_app/app.py" />
         <option value="$PROJECT_DIR$/web_app/templates/operatorAddData.html" />
-        <option value="$PROJECT_DIR$/web_app/form.py" />
         <option value="$PROJECT_DIR$/web_app/templates/edit_catin.html" />
+        <option value="$PROJECT_DIR$/web_app/form.py" />
+        <option value="$PROJECT_DIR$/web_app/templates/society_dashboard.html" />
+        <option value="$PROJECT_DIR$/web_app/models.py" />
+        <option value="$PROJECT_DIR$/web_app/app.py" />
       </list>
     </option>
   </component>
@@ -343,7 +346,7 @@
     <frame x="1366" y="34" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2905918" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21092564" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -356,7 +359,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007587" side_tool="true" weight="0.29382303" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924126" visible="true" weight="0.34891486" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49924126" visible="true" weight="0.2921536" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -490,13 +493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_app/templates/society_input_data.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="34" column="73" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/migrations/versions/ec47554720b0_add_colom_is_public.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-213" />
@@ -506,13 +502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_app/templates/society_dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="74" column="43" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -561,42 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_app/form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="58" column="12" selection-start-line="58" selection-end-line="59" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-            <marker date="1541685282750" expanded="true" signature="423:428" ph="..." />
-            <marker date="1541685282750" expanded="true" signature="1160:1165" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_app/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="207" column="40" lean-forward="true" selection-start-line="207" selection-start-column="40" selection-end-line="207" selection-end-column="40" />
-          <folding>
-            <marker date="1541685045927" expanded="true" signature="738:739" ph="..." />
-            <marker date="1541685045927" expanded="true" signature="1793:12238" ph="..." />
-            <marker date="1541685045927" expanded="true" signature="8316:8325" ph="..." />
-            <marker date="1541685045927" expanded="true" signature="8316:12238" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="110" column="44" selection-start-line="110" selection-start-column="30" selection-end-line="110" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <marker date="1541684926817" expanded="true" signature="1436:1442" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web_app/templates/operator_dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -608,6 +561,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="75" column="83" selection-start-line="75" selection-start-column="83" selection-end-line="75" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_app/form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="58" column="96" lean-forward="true" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="96" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+            <marker date="1541685282750" expanded="true" signature="423:428" ph="..." />
+            <marker date="1541685282750" expanded="true" signature="1160:1165" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_app/templates/society_input_data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="34" column="73" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_app/templates/society_dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="76" column="25" lean-forward="true" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="88" column="18" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <marker date="1541686583620" expanded="true" signature="1436:1442" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_app/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="151" column="59" selection-start-line="151" selection-start-column="59" selection-end-line="151" selection-end-column="59" />
+          <folding>
+            <element signature="e#1557#1730#0" />
+            <element signature="e#1929#2808#0" />
+            <element signature="e#2887#4068#0" />
+            <element signature="e#4142#4197#0" />
+            <element signature="e#9828#10358#0" />
+            <element signature="e#10453#12175#0" />
+            <marker date="1541686877778" expanded="false" signature="750:751" ph="..." />
+            <marker date="1541686877778" expanded="true" signature="1805:11952" ph="..." />
+            <marker date="1541686877778" expanded="true" signature="7899:7908" ph="..." />
+            <marker date="1541686877778" expanded="true" signature="7899:11952" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

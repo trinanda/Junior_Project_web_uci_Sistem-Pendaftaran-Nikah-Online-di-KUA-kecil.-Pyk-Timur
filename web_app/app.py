@@ -12,6 +12,7 @@ import pdfkit
 from models import db, Content, Role, User, DataCatin
 from views import MyModelView, ContentView, dataCatinView
 from form import RegisterFormView, LoginFormView, SocietyInputDataView, OperatorAddDataView, EditCatin
+import time
 def create_app():
 
     app = Flask(__name__)
@@ -113,24 +114,6 @@ def create_app():
     @login_required
     def society():
         dataUser = User('', '', '')
-        # if dataUser is not None:
-            # result, pesan_pedaftaran = db.session.query(User, DataCatin.status_pendaftaran).join(DataCatin). \
-            #     filter(DataCatin.user_id == current_user.id).first()
-            # pesan_pedaftaran = current_user.status_pendaftaran
-            # try:
-            #     if pesan_pedaftaran == 'Terdaftar':
-            #         pesan_pedaftaran = 'Selamat ' + current_user.name + ' Anda telah terdaftar'
-            #     else:
-            #         pesan_pedaftaran = 'Anda belum melakukan pedaftaran ' + current_user.name + ' Silahkan melakukan pedaftaran'
-            # except:
-            #     pesan_pedaftaran = str('Data Belum di inputkan')
-
-        # try:
-        #     status_pendaftaran = current_user.status_pendaftaran
-        #     if status_pendaftaran is None:
-        #         status_pendaftaran = 'Status pedaftaran Anda belum di update'
-        # except:
-        #     pass
 
         id_user = current_user.id
 
@@ -143,26 +126,33 @@ def create_app():
                 filter(DataCatin.user_id == current_user.id).first()
             result, nama_catin_perempuan = db.session.query(User, DataCatin.nama_catin_perempuan).join(DataCatin). \
                 filter(DataCatin.user_id == current_user.id).first()
+            result, tanggal_daftar = db.session.query(User, DataCatin.tanggal_daftar).join(DataCatin). \
+                filter(DataCatin.user_id == current_user.id).first()
             result, jadwal_nikah = db.session.query(User, DataCatin.jadwal_nikah).join(DataCatin). \
+                filter(DataCatin.user_id == current_user.id).first()
+            result, jam = db.session.query(User, DataCatin.jam).join(DataCatin). \
                 filter(DataCatin.user_id == current_user.id).first()
             result, tempat_pelaksaan_nikah = db.session.query(User, DataCatin.tempat_pelaksaan_nikah).join(DataCatin). \
                 filter(DataCatin.user_id == current_user.id).first()
             result, status_pendaftaran = db.session.query(User, DataCatin.status_pendaftaran).join(DataCatin). \
                 filter(DataCatin.user_id == current_user.id).first()
         except:
-            nik_catin_laki_laki = 'None'
-            nama_catin_laki_laki = 'None'
-            nik_catin_perempuan = 'None'
-            nama_catin_perempuan = 'None'
-            jadwal_nikah = 'None'
-            tempat_pelaksaan_nikah = 'None'
-            status_pendaftaran = 'None'
+            nik_catin_laki_laki = '-'
+            nama_catin_laki_laki = '-'
+            nik_catin_perempuan = '-'
+            nama_catin_perempuan = '-'
+            tanggal_daftar = '-'
+            jadwal_nikah = '-'
+            jam = '-'
+            tempat_pelaksaan_nikah = '-'
+            status_pendaftaran = '-'
 
         # return render_template('society_dashboard.html', WELCOME=current_user.name)
         return render_template('society_dashboard.html', WELCOME=current_user.name, NIK_LAKI_LAKI=nik_catin_laki_laki,
                                NAMA_CATIN_LAKI_LAKI=nama_catin_laki_laki, NIK_CATIN_PEREMPUAN=nik_catin_perempuan,
-                               NAMA_CATIN_PEREMPUAN=nama_catin_perempuan, JADWAL_NIKAH=jadwal_nikah,
-                               TEMPAT_PELAKSAAN_NIKAH=tempat_pelaksaan_nikah, STATUS_PENDAFTARAN=status_pendaftaran)
+                               NAMA_CATIN_PEREMPUAN=nama_catin_perempuan, TANGGAL_DAFTAR=tanggal_daftar,
+                               JAM=jam, JADWAL_NIKAH=jadwal_nikah, TEMPAT_PELAKSAAN_NIKAH=tempat_pelaksaan_nikah,
+                               STATUS_PENDAFTARAN=status_pendaftaran)
 
 
     @app.route('/societyinputdata', methods = ['GET', 'POST'])
@@ -171,10 +161,11 @@ def create_app():
         form = SocietyInputDataView(request.form)
         if request.method == 'POST':
             if form.validate_on_submit():
+                tanggal_daftar = time.strftime("%Y-%m-%d %H:%M:%S")
                 add_jam = request.form['jam']
                 new_data = DataCatin(form.NIK_catin_laki_laki.data, form.nama_catin_laki_laki.data,
                                      form.NIK_catin_perempuan.data, form.nama_catin_perempuan.data,
-                                     form.jadwal_nikah.data, add_jam, form.tempat_pelaksaan_nikah.data, current_user.id)
+                                     tanggal_daftar, form.jadwal_nikah.data, add_jam, form.tempat_pelaksaan_nikah.data, current_user.id)
                 db.session.add(new_data)
                 db.session.commit()
                 return redirect(url_for('society'))
