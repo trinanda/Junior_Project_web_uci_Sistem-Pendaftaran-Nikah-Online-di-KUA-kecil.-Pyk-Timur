@@ -91,11 +91,10 @@ def create_app():
                     login_user(user, remember=form.remember.data)
                     if current_user.email == 'operator1@gmail.com':
                         return redirect(url_for('operator'))
-                    # else:
-                    #     return redirect(url_for('society'))
+                    else:
+                        return redirect(url_for('society'))
                 else:
                     return '<h1>Invalid username or password</h1>'
-
 
         return render_template('login.html', form=form)
 
@@ -109,38 +108,56 @@ def create_app():
     @login_required
     def society():
         dataUser = User('', '', '')
-        if dataUser is not None:
-            pesan_pedaftaran = current_user.status_pendaftaran
-            try:
-                if pesan_pedaftaran == 'Terdaftar':
-                    pesan_pedaftaran = 'Selamat ' + current_user.name + ' Anda telah terdaftar'
-                else:
-                    pesan_pedaftaran = 'Anda belum melakukan pedaftaran ' + current_user.name + ' Silahkan melakukan pedaftaran'
-            except:
-                pesan_pedaftaran = str('Data Belum di inputkan')
+        # if dataUser is not None:
+            # result, pesan_pedaftaran = db.session.query(User, DataCatin.status_pendaftaran).join(DataCatin). \
+            #     filter(DataCatin.user_id == current_user.id).first()
+            # pesan_pedaftaran = current_user.status_pendaftaran
+            # try:
+            #     if pesan_pedaftaran == 'Terdaftar':
+            #         pesan_pedaftaran = 'Selamat ' + current_user.name + ' Anda telah terdaftar'
+            #     else:
+            #         pesan_pedaftaran = 'Anda belum melakukan pedaftaran ' + current_user.name + ' Silahkan melakukan pedaftaran'
+            # except:
+            #     pesan_pedaftaran = str('Data Belum di inputkan')
 
-        try:
-            status_pendaftaran = current_user.status_pendaftaran
-            if status_pendaftaran is None:
-                status_pendaftaran = 'Status pedaftaran Anda belum di update'
-        except:
-            pass
+        # try:
+        #     status_pendaftaran = current_user.status_pendaftaran
+        #     if status_pendaftaran is None:
+        #         status_pendaftaran = 'Status pedaftaran Anda belum di update'
+        # except:
+        #     pass
 
         id_user = current_user.id
 
         try:
-            result, nik_laki_laki = db.session.query(User, DataCatin.NIK_catin_laki_laki).join(DataCatin).\
+            result, nik_catin_laki_laki = db.session.query(User, DataCatin.NIK_catin_laki_laki).join(DataCatin).\
                 filter(DataCatin.user_id == current_user.id).first()
-            result2, nama_catin_laki_laki = db.session.query(User, DataCatin.nama_catin_laki_laki).join(DataCatin).\
+            result, nama_catin_laki_laki = db.session.query(User, DataCatin.nama_catin_laki_laki).join(DataCatin).\
                 filter(DataCatin.user_id == current_user.id).first()
-            name = current_user.email
+            result, nik_catin_perempuan = db.session.query(User, DataCatin.NIK_catin_perempuan).join(DataCatin). \
+                filter(DataCatin.user_id == current_user.id).first()
+            result, nama_catin_perempuan = db.session.query(User, DataCatin.nama_catin_perempuan).join(DataCatin). \
+                filter(DataCatin.user_id == current_user.id).first()
+            result, jadwal_nikah = db.session.query(User, DataCatin.jadwal_nikah).join(DataCatin). \
+                filter(DataCatin.user_id == current_user.id).first()
+            result, tempat_pelaksaan_nikah = db.session.query(User, DataCatin.tempat_pelaksaan_nikah).join(DataCatin). \
+                filter(DataCatin.user_id == current_user.id).first()
+            result, status_pendaftaran = db.session.query(User, DataCatin.status_pendaftaran).join(DataCatin). \
+                filter(DataCatin.user_id == current_user.id).first()
         except:
-            nik_laki_laki = 'None'
+            nik_catin_laki_laki = 'None'
             nama_catin_laki_laki = 'None'
+            nik_catin_perempuan = 'None'
+            nama_catin_perempuan = 'None'
+            jadwal_nikah = 'None'
+            tempat_pelaksaan_nikah = 'None'
+            status_pendaftaran = 'None'
 
         # return render_template('society_dashboard.html', WELCOME=current_user.name)
-        return render_template('society_dashboard.html', WELCOME=current_user.name, NIK_LAKI_LAKI=nik_laki_laki,
-                               NAMA_CATIN_LAKI_LAKI=nama_catin_laki_laki)
+        return render_template('society_dashboard.html', WELCOME=current_user.name, NIK_LAKI_LAKI=nik_catin_laki_laki,
+                               NAMA_CATIN_LAKI_LAKI=nama_catin_laki_laki, NIK_CATIN_PEREMPUAN=nik_catin_perempuan,
+                               NAMA_CATIN_PEREMPUAN=nama_catin_perempuan, JADWAL_NIKAH=jadwal_nikah,
+                               TEMPAT_PELAKSAAN_NIKAH=tempat_pelaksaan_nikah, STATUS_PENDAFTARAN=status_pendaftaran)
 
 
     @app.route('/societyinputdata', methods = ['GET', 'POST'])
@@ -165,7 +182,7 @@ def create_app():
         if 'email' in session:
             name = current_user.name
             all_user_data = DataCatin.query.all()
-            return render_template('operator_dashboard.html', WELCOME=current_user.name, OPERATOR_DATA=all_user_data)
+            return render_template('operator_dashboard.html', WELCOME=current_user.name, catin=all_user_data)
         else:
             return redirect(url_for('index'))
 
@@ -182,25 +199,30 @@ def create_app():
                                      form.NIK_catin_perempuan.data, form.nama_catin_perempuan.data,
                                      form.jadwal_nikah.data, add_jam, form.tempat_pelaksaan_nikah.data, current_user.id)
                 db.session.add(new_data)
-                db.session.commit()
+                try:
+                    db.session.commit()
+                except:
+                    return 'Data yang dimasukan sudah ada, mohon diulangi!!!'
                 return redirect(url_for('operator'))
 
         return render_template('operatorAddData.html', form=form, OPERATOR_NAME=operator_name)
 
-    @app.route('/delete/<dataCantin_id>')
-    def delete(dataCantin_id):
-        data = db.session.query(DataCatin, User).join(User).filter(DataCatin.id == dataCantin_id).first()
-        if data.DataCantin.is_public:
-            return render_template('data_detail.html', dataCantin=data)
+##################################################################################################################
+    @app.route('/delete_data/<catin_id>')
+    def delete_data(catin_id):
+        data = db.session.query(DataCatin, User).join(User).filter(DataCatin.id == catin_id).first()
+        if data.DataCatin.is_public:
+            return render_template('catin_detail.html', catin=data)
         else:
             try:
-                if current_user.is_authenticated and data.DataCantin.user_id == current_user.id:
-                    data = DataCatin.query.filter_by(id=dataCantin_id).first()
+                if current_user.is_authenticated and data.DataCatin.user_id == current_user.id:
+                    data = DataCatin.query.filter_by(id=catin_id).first()
                     db.session.delete(data)
                     db.session.commit()
             except:
                 return 'Tidak bisa delete data, karena sedang digunakan'
         return redirect(url_for('operator'))
 
+##################################################################################################################
 
     return app

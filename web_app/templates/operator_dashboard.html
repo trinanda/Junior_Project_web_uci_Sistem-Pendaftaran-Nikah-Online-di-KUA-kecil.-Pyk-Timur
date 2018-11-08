@@ -65,7 +65,7 @@ Dashboard
                 </tr>
               </thead>
               <tbody>
-              {% for list in OPERATOR_DATA %}
+              {% for list in catin %}
                 <tr>
                   <td>{{ list.NIK_catin_laki_laki }}</td>
                   <td>{{ list.nama_catin_laki_laki }}</td>
@@ -75,7 +75,7 @@ Dashboard
                   <td>{{ list.jam }}</td>
                   <td>{{ list.tempat_pelaksaan_nikah }}</td>
                   <td>
-                    <a href="">Delete</a>
+                    <a href="{{ url_for('delete_data', catin_id=list.id) }}">Delete</a>
                   </td>
                 </tr>
               {% endfor %}

@@ -37,10 +37,7 @@ class User(db.Model, UserMixin):
     roles = relationship('Role', secondary=roles_users,
                          backref=backref('users', lazy='dynamic'))
 
-    ON_PROCESS = 'Sedang di proses'
-    ACCEPTED = 'Diterima'
 
-    status_pendaftaran = Column(Enum(ON_PROCESS, ACCEPTED, name='status_pendaftaran', default=ON_PROCESS))
 
     def __init__(self, name='', email='', password='', active=False):
         self.name = name
@@ -89,9 +86,17 @@ class DataCatin(db.Model):
 
     user_id = Column(Integer, ForeignKey(User.id))
 
+    is_public = Column(Boolean(), nullable=False)
+
+    ON_PROCESS = 'Sedang di proses'
+    ACCEPTED = 'Diterima'
+
+    status_pendaftaran = Column(Enum(ON_PROCESS, ACCEPTED, name='status_pendaftaran', default=ON_PROCESS))
+
 
     def __init__(self, NIK_catin_laki_laki='', nama_catin_laki_laki='', NIK_catin_perempuan='',
-                 nama_catin_perempuan='', jadwal_nikah='', jam='', tempat_pelaksaan_nikah='', user_id=''):
+                 nama_catin_perempuan='', jadwal_nikah='', jam='', tempat_pelaksaan_nikah='', user_id='', is_public=False,
+                 status_pendaftaran=ON_PROCESS):
         self.NIK_catin_laki_laki = NIK_catin_laki_laki
         self.nama_catin_laki_laki = nama_catin_laki_laki
         self.NIK_catin_perempuan = NIK_catin_perempuan
@@ -100,4 +105,6 @@ class DataCatin(db.Model):
         self.jam = jam
         self.tempat_pelaksaan_nikah = tempat_pelaksaan_nikah
         self.user_id = user_id
+        self.is_public = is_public
+        self.status_pendaftaran = status_pendaftaran
 
