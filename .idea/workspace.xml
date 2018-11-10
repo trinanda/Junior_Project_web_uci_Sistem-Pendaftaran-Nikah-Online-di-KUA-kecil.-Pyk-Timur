@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8335985c-1e1b-4534-b227-100bfe4ee3c1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/web_app/static/home/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/static/home/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/templates/index_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/templates/index_page.html" afterDir="false" />
-    </list>
+    <list default="true" id="8335985c-1e1b-4534-b227-100bfe4ee3c1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/web_app/app.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="151">
-              <caret line="70" column="57" lean-forward="true" selection-start-line="70" selection-start-column="57" selection-end-line="70" selection-end-column="57" />
+              <caret line="70" column="57" selection-start-line="70" selection-start-column="57" selection-end-line="70" selection-end-column="57" />
               <folding>
                 <marker date="1541842117033" expanded="false" signature="783:784" ph="..." />
                 <marker date="1541842117033" expanded="true" signature="1838:14910" ph="..." />
@@ -107,8 +104,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web_app/templates/index_page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="109" column="20" selection-start-line="109" selection-start-column="20" selection-end-line="109" selection-end-column="20" />
+            <state relative-caret-position="200">
+              <caret line="112" column="166" selection-start-line="112" selection-start-column="166" selection-end-line="112" selection-end-column="166" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -121,7 +118,7 @@
         <entry file="file://$PROJECT_DIR$/web_app/static/home/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="140">
-              <caret line="183" column="20" lean-forward="true" selection-start-line="183" selection-start-column="20" selection-end-line="183" selection-end-column="20" />
+              <caret line="183" column="20" selection-start-line="183" selection-start-column="20" selection-end-line="183" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -438,7 +435,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22878788" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -692,7 +688,7 @@
     <entry file="file://$PROJECT_DIR$/web_app/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
-          <caret line="70" column="57" lean-forward="true" selection-start-line="70" selection-start-column="57" selection-end-line="70" selection-end-column="57" />
+          <caret line="70" column="57" selection-start-line="70" selection-start-column="57" selection-end-line="70" selection-end-column="57" />
           <folding>
             <marker date="1541842117033" expanded="false" signature="783:784" ph="..." />
             <marker date="1541842117033" expanded="true" signature="1838:14910" ph="..." />
@@ -715,7 +711,7 @@
     <entry file="file://$PROJECT_DIR$/web_app/static/home/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
-          <caret line="183" column="20" lean-forward="true" selection-start-line="183" selection-start-column="20" selection-end-line="183" selection-end-column="20" />
+          <caret line="183" column="20" selection-start-line="183" selection-start-column="20" selection-end-line="183" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -728,8 +724,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web_app/templates/index_page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="109" column="20" selection-start-line="109" selection-start-column="20" selection-end-line="109" selection-end-column="20" />
+        <state relative-caret-position="200">
+          <caret line="112" column="166" selection-start-line="112" selection-start-column="166" selection-end-line="112" selection-end-column="166" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
