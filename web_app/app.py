@@ -72,8 +72,7 @@ def create_app():
                 db.session.add(new_user)
                 db.session.commit()
 
-                return "<h1> Sukses mendaftar, Anda baru bisa login ketika akun sudah di aktivkan oleh " \
-                       "admin. <br> kembali ke menu <a href=" + url_index + ">utama</a></h1>"
+                return redirect(url_for('login'))
         except:
             return "<h2> Data yang di inputkan harus unique, sepertinya salah satu data yang Anda Masukan sudah terdaftar, " \
                    "Mohon ulangi input data dengan teliti...!!!  <br> <a href=" + url_index + "signup>Ulangi Input Data</a></h2>"
