@@ -18,7 +18,7 @@ Dashboard
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Informasi</a>
+          <a class="navbar-brand" href="{{ url_for('operator') }}">Informasi</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -38,7 +38,7 @@ Dashboard
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Operator | Overview <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="{{ url_for('operator') }}">Operator | Overview <span class="sr-only">(current)</span></a></li>
             <li class="#"><a href="{{ url_for('operatorAddData') }}">Operator | Masukan Data <span class="sr-only">(current)</span></a></li>
 
           </ul>
@@ -48,7 +48,15 @@ Dashboard
           <h1 class="page-header">Welcome, {{ WELCOME }}</h1>
 
 
-          <h2 class="sub-header">Data Catin</h2>
+          <h2 class="sub-header">
+            Data Catin
+            <div style="font-size: 16px; text-align:right;">
+              <!--<a href="{{ DOWNLOAD_CSV }}">Download CSV</a>-->
+              <form action="">
+                <input type="submit" value="Download CSV" class="btn btn-primary">
+              </form>
+            </div>
+          </h2>
           <div class="table-responsive">
 
 

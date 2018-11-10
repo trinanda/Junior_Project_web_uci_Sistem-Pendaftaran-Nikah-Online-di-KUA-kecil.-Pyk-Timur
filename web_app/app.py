@@ -13,6 +13,9 @@ from models import db, Content, Role, User, DataCatin
 from views import MyModelView, ContentView, dataCatinView
 from form import RegisterFormView, LoginFormView, SocietyInputDataView, OperatorAddDataView, EditCatin
 import time
+from flask_csv import send_csv
+
+
 def create_app():
 
     app = Flask(__name__)
@@ -84,23 +87,29 @@ def create_app():
             if form.validate_on_submit():
                 session['email'] = request.form['email']
                 takeEmail = session['email'] = request.form['email']
-                takeRoles = User.query.filter_by(email=takeEmail).first()
-                takeRoles = takeRoles.roles
-                # takeRoles = ''.join(takeRoles)
-                print('testing', takeRoles)
-                user = User.query.filter_by(email=form.email.data).first()
-                if verify_password(user.password, form.password.data):
-                    user.authenticated = True
-                    db.session.add(user)
-                    db.session.commit()
-                    login_user(user)
-                    login_user(user, remember=form.remember.data)
-                    if takeRoles == ['user']:
-                        return redirect(url_for('operator'))
-                    elif takeRoles == []:
-                        return redirect(url_for('society'))
-                else:
-                    return '<h1>Invalid username or password</h1>'
+                try:
+                    takeRoles = User.query.filter_by(email=takeEmail).first()
+                    takeRoles = takeRoles.roles
+                    # takeRoles = ''.join(takeRoles)
+                    print('testing', takeRoles)
+                    user = User.query.filter_by(email=form.email.data).first()
+
+                    if verify_password(user.password, form.password.data):
+                        user.authenticated = True
+                        db.session.add(user)
+                        db.session.commit()
+                        login_user(user)
+                        login_user(user, remember=form.remember.data)
+                        if takeRoles == ['user']:
+                            return redirect(url_for('operator'))
+                        elif takeRoles == []:
+                            return redirect(url_for('society'))
+                        else:
+                            pass
+                    else:
+                        return '<h1>Invalid username or password</h1>'
+                except:
+                    return 'Sepertinya user yang Anda masukan belum terdaftar, mohon diperiksa lagi'
 
         return render_template('login.html', form=form)
 
@@ -178,9 +187,34 @@ def create_app():
         if 'email' in session:
             name = current_user.name
             all_user_data = DataCatin.query.all()
-            return render_template('operator_dashboard.html', WELCOME=current_user.name, catin=all_user_data)
+
+            return render_template('operator_dashboard.html', WELCOME=name, catin=all_user_data,
+                                   DOWNLOAD_CSV='')
         else:
             return redirect(url_for('index'))
+
+    @app.route('/csv')
+    def csv():
+        all_user_data = DataCatin.query.all()
+        # nik_CL_to_CSV = []
+        all_data_CSV = []
+        for i in all_user_data:
+            # nik_CL_to_CSV.append({'NIK Catin Laki-laki': i.NIK_catin_laki_laki})
+            all_data_CSV.append({'NIK Catin Laki-laki': i.NIK_catin_laki_laki,
+                                 'Nama Catin Laki-laki': i.nama_catin_laki_laki,
+                                 'NIK Catin Perempuan': i.NIK_catin_perempuan,
+                                 'Nama Catin Perempuan': i.nama_catin_perempuan,
+                                 'Tanggal Daftar': i.tanggal_daftar,
+                                 'Jadwal Nikah': i.jadwal_nikah,
+                                'Jam': i.jam,
+                                'Tempat Pelaksanaan Nikah': i.tempat_pelaksaan_nikah,
+                                'Status Pendaftaran': i.status_pendaftaran
+                                 })
+        return  send_csv(all_data_CSV,
+            "testing.csv", ['<b>NIK Catin Laki-laki</b>', 'Nama Catin Laki-laki', 'NIK Catin Perempuan', 'Nama Catin Perempuan',
+                            'Tanggal Daftar', 'Jadwal Nikah', 'Jam', 'Tempat Pelaksanaan Nikah','Status Pendaftaran'],
+                         cache_timeout=1, delimiter=';')
+
 
     @app.route('/operatorAddData', methods=['GET', 'POST'])
     @login_required

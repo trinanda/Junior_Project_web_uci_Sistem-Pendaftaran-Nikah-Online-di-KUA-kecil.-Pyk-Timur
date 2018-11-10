@@ -3,5 +3,8 @@
 
 
 ##### saat ini yang kurang (yang terpikirkan saat ini)
-###### - operator download report
+###### - operator download report -> sudah bisa tapi belum diterapkan kedalam aplikasi
 ###### - pesan pada beranda
+###### - background
+
+
