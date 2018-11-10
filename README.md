@@ -9,7 +9,6 @@
 
 
 ###### - delete data terakhir
-###### - redirect setelah register ke halaman login
 ###### - membuat Data Catin dari admmin/superuser masih ada error
 
 
