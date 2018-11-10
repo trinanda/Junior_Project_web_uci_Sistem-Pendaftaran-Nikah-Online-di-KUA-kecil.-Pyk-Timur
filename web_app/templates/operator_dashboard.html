@@ -52,8 +52,8 @@ Dashboard
             Data Catin
             <div style="font-size: 16px; text-align:right;">
               <!--<a href="{{ DOWNLOAD_CSV }}">Download CSV</a>-->
-              <form action="">
-                <input type="submit" value="Download CSV" class="btn btn-primary">
+              <form action="{{ url_for('operator') }}" method="post">
+                <input type="submit" value="Download CSV" class="btn btn-success">
               </form>
             </div>
           </h2>

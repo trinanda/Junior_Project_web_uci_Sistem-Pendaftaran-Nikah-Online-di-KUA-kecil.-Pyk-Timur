@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8335985c-1e1b-4534-b227-100bfe4ee3c1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/000-percobaan/.~lock.testing.xlsx#" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/000-percobaan/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/000-percobaan/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/000-percobaan/testing.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/templates/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/templates/operatorAddData.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/templates/operatorAddData.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_app/templates/operator_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/templates/operator_dashboard.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,10 +61,10 @@
         <counts>
           <entry key="Dockerfile" value="114" />
           <entry key="dummy" value="16" />
-          <entry key="html" value="2661" />
+          <entry key="html" value="2692" />
           <entry key="ini" value="18" />
           <entry key="md" value="419" />
-          <entry key="py" value="8186" />
+          <entry key="py" value="8351" />
           <entry key="sh" value="30" />
           <entry key="txt" value="13" />
           <entry key="yml" value="429" />
@@ -81,11 +74,11 @@
         <counts>
           <entry key="Bash" value="30" />
           <entry key="Dockerfile" value="114" />
-          <entry key="HTML" value="2661" />
+          <entry key="HTML" value="2692" />
           <entry key="Hoi4 file" value="13" />
           <entry key="Markdown" value="419" />
           <entry key="PLAIN_TEXT" value="34" />
-          <entry key="Python" value="8186" />
+          <entry key="Python" value="8351" />
           <entry key="YAML" value="429" />
         </counts>
       </usages-collector>
@@ -93,16 +86,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_app/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="104" column="47" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
+            <state relative-caret-position="202">
+              <caret line="211" lean-forward="true" selection-start-line="211" selection-end-line="211" />
               <folding>
-                <marker date="1541830069012" expanded="false" signature="783:784" ph="..." />
-                <marker date="1541830069012" expanded="true" signature="1838:13477" ph="..." />
-                <marker date="1541830069012" expanded="true" signature="8087:8096" ph="..." />
-                <marker date="1541830069012" expanded="true" signature="8087:13477" ph="..." />
+                <marker date="1541832231155" expanded="false" signature="783:784" ph="..." />
+                <marker date="1541832231155" expanded="true" signature="1838:15068" ph="..." />
+                <marker date="1541832231155" expanded="true" signature="8210:8219" ph="..." />
+                <marker date="1541832231155" expanded="true" signature="8210:15068" ph="..." />
               </folding>
             </state>
           </provider>
@@ -111,7 +104,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1455">
+            <state relative-caret-position="307">
               <caret line="100" column="4" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="22" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -121,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web_app/templates/operator_dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="55" column="56" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
+            <state relative-caret-position="267">
+              <caret line="54" column="53" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#h2#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -136,7 +129,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/000-percobaan/with-flask-csv/csv_export.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="154">
               <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
               <folding>
                 <element signature="e#39#62#0" expanded="true" />
@@ -157,7 +150,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>delete</find>
       <find>delete_delete</find>
       <find>cantin</find>
       <find>OPERATOR_DATA</find>
@@ -185,8 +177,9 @@
       <find>91</find>
       <find>baz</find>
       <find>Silahkan login, atau register jika belum mempunyai akun:</find>
-      <find>operator</find>
       <find>nik_CL_to_CSV</find>
+      <find>operator</find>
+      <find>csv</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -229,8 +222,8 @@
         <option value="$PROJECT_DIR$/000-percobaan/testing.py" />
         <option value="$PROJECT_DIR$/000-percobaan/with-flask-csv/csv_export.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/web_app/templates/operator_dashboard.html" />
         <option value="$PROJECT_DIR$/web_app/app.py" />
+        <option value="$PROJECT_DIR$/web_app/templates/operator_dashboard.html" />
       </list>
     </option>
   </component>
@@ -277,7 +270,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../reservasi-homestay-lembah-harau_2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
@@ -399,6 +392,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="27" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1590909" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -413,7 +407,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007587" side_tool="true" weight="0.29382303" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49924126" visible="true" weight="0.24875621" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49924126" visible="true" weight="0.33996683" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -633,9 +627,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/000-percobaan/with-flask-csv/csv_export.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="e#39#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web_app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
+        <state relative-caret-position="307">
           <caret line="100" column="4" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="22" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
@@ -644,35 +648,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/000-percobaan/with-flask-csv/csv_export.py">
+    <entry file="file://$PROJECT_DIR$/web_app/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        <state relative-caret-position="202">
+          <caret line="211" lean-forward="true" selection-start-line="211" selection-end-line="211" />
           <folding>
-            <element signature="e#39#62#0" expanded="true" />
+            <marker date="1541832231155" expanded="false" signature="783:784" ph="..." />
+            <marker date="1541832231155" expanded="true" signature="1838:15068" ph="..." />
+            <marker date="1541832231155" expanded="true" signature="8210:8219" ph="..." />
+            <marker date="1541832231155" expanded="true" signature="8210:15068" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web_app/templates/operator_dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="55" column="56" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
+        <state relative-caret-position="267">
+          <caret line="54" column="53" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
           <folding>
             <element signature="n#style#0;n#div#0;n#h2#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_app/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="104" column="47" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
-          <folding>
-            <marker date="1541830069012" expanded="false" signature="783:784" ph="..." />
-            <marker date="1541830069012" expanded="true" signature="1838:13477" ph="..." />
-            <marker date="1541830069012" expanded="true" signature="8087:8096" ph="..." />
-            <marker date="1541830069012" expanded="true" signature="8087:13477" ph="..." />
           </folding>
         </state>
       </provider>

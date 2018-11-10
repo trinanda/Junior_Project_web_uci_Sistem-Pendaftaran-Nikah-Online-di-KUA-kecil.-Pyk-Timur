@@ -188,6 +188,28 @@ def create_app():
             name = current_user.name
             all_user_data = DataCatin.query.all()
 
+            if request.method == 'POST':
+                all_data_CSV = []
+                for i in all_user_data:
+                    # nik_CL_to_CSV.append({'NIK Catin Laki-laki': i.NIK_catin_laki_laki})
+                    all_data_CSV.append({'NIK Catin Laki-laki': i.NIK_catin_laki_laki,
+                                         'Nama Catin Laki-laki': i.nama_catin_laki_laki,
+                                         'NIK Catin Perempuan': i.NIK_catin_perempuan,
+                                         'Nama Catin Perempuan': i.nama_catin_perempuan,
+                                         'Tanggal Daftar': i.tanggal_daftar,
+                                         'Jadwal Nikah': i.jadwal_nikah,
+                                         'Jam': i.jam,
+                                         'Tempat Pelaksanaan Nikah': i.tempat_pelaksaan_nikah,
+                                         'Status Pendaftaran': i.status_pendaftaran
+                                         })
+
+                return send_csv(all_data_CSV,
+                             "testing.csv", ['NIK Catin Laki-laki', 'Nama Catin Laki-laki', 'NIK Catin Perempuan',
+                                             'Nama Catin Perempuan',
+                                             'Tanggal Daftar', 'Jadwal Nikah', 'Jam', 'Tempat Pelaksanaan Nikah',
+                                             'Status Pendaftaran'],
+                             cache_timeout=1, delimiter=';')
+
             return render_template('operator_dashboard.html', WELCOME=name, catin=all_user_data,
                                    DOWNLOAD_CSV='')
         else:
