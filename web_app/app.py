@@ -203,7 +203,7 @@ def create_app():
                                          })
 
                 return send_csv(all_data_CSV,
-                             "testing.csv", ['NIK Catin Laki-laki', 'Nama Catin Laki-laki', 'NIK Catin Perempuan',
+                             "laporan pendaftaran.csv", ['NIK Catin Laki-laki', 'Nama Catin Laki-laki', 'NIK Catin Perempuan',
                                              'Nama Catin Perempuan',
                                              'Tanggal Daftar', 'Jadwal Nikah', 'Jam', 'Tempat Pelaksanaan Nikah',
                                              'Status Pendaftaran'],
